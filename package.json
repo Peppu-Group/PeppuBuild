@@ -1,0 +1,15 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "Headless CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ukpai Ugochi",
+  "license": "ISC",
+  "dependencies": {
+    "grapesjs": "^0.21.1",
+    "grapesjs-preset-webpage": "^1.0.2"
+  }
+}
