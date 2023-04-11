@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="node_modules/grapesjs/dist/css/grapes.min.css"> 
     <script src="node_modules/grapesjs/dist/grapes.min.js"></script>  
     <script src="node_modules/grapesjs-preset-webpage/dist/index.js"></script> 
+    <script src="node_modules/grapesjs-blocks-basic/dist/index.js"></script> 
     <style>
         body,
         html {
@@ -90,9 +91,10 @@
             container: '#gjs',
             fromElement: true,
   
-            plugins: ['grapesjs-preset-webpage'],
+            plugins: ['grapesjs-preset-webpage', 'gjs-blocks-basic'],
             pluginsOpts: {
-              'grapesjs-preset-webpage': {}
+              'grapesjs-preset-webpage': {},
+              'gjs-blocks-basic': {}
             }
           });
         });
