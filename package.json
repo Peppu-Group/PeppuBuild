@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "grapesjs": "^0.21.1",
+    "grapesjs-blocks-basic": "^1.0.1",
     "grapesjs-preset-webpage": "^1.0.2"
   }
 }

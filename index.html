@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/grapesjs/dist/css/grapes.min.css"> 
     <script src="node_modules/grapesjs/dist/grapes.min.js"></script>  
+    <script src="node_modules/grapesjs-preset-webpage/dist/index.js"></script> 
     <style>
         body,
         html {
@@ -80,48 +81,21 @@
     </div>
 
     <script type="text/javascript">
-      var editor = grapesjs.init({
-        showOffsets: 1,
-        noticeOnUnload: 0,
-        container: '#gjs',
-        height: '100%',
-        fromElement: true,
-        storageManager: { autoload: 0 },
-        styleManager : {
-          sectors: [{
-              name: 'General',
-              open: false,
-              buildProps: ['float', 'display', 'position', 'top', 'right', 'left', 'bottom']
-            },{
-              name: 'Flex',
-              open: false,
-              buildProps: ['flex-direction', 'flex-wrap', 'justify-content', 'align-items', 'align-content', 'order', 'flex-basis', 'flex-grow', 'flex-shrink', 'align-self']
-            },{
-              name: 'Dimension',
-              open: false,
-              buildProps: ['width', 'height', 'max-width', 'min-height', 'margin', 'padding'],
-            },{
-              name: 'Typography',
-              open: false,
-              buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-shadow'],
-            },{
-              name: 'Decorations',
-              open: false,
-              buildProps: ['border-radius-c', 'background-color', 'border-radius', 'border', 'box-shadow', 'background'],
-            },{
-              name: 'Extra',
-              open: true,
-              buildProps: ['transition', 'perspective', 'transform'],
+        setTimeout(() => {
+          window.editor = grapesjs.init({
+            height: '100%',
+            showOffsets: true,
+            noticeOnUnload: true,
+            storageManager: true,
+            container: '#gjs',
+            fromElement: true,
+  
+            plugins: ['grapesjs-preset-webpage'],
+            pluginsOpts: {
+              'grapesjs-preset-webpage': {}
             }
-          ],
-        },
-      });
-
-      editor.BlockManager.add('testBlock', {
-        label: 'Block',
-        attributes: { class:'gjs-fonts gjs-f-b1' },
-        content: `<div style="padding-top:50px; padding-bottom:50px; text-align:center">Test block</div>`
-      })
-    </script>
+          });
+        });
+      </script>
   </body>
 </html>
