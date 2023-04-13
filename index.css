@@ -7,21 +7,21 @@ html {
 
 /* Theming */
 .gjs-one-bg {
-    background-color: black;
+    background-color: black !important;
 }
 
 .gjs-two-color {
-    color: white;
+    color: white !important;
 }
 
 .gjs-three-bg {
-    background-color: #1E8FE1;
-    color: white;
+    background-color: #1E8FE1 !important;
+    color: white !important;
 }
 
 .gjs-four-color,
 .gjs-four-color-h:hover {
-    color: #1E8FE1;
+    color: #1E8FE1 !important;
 }
 
 /* Style manager properties*/
