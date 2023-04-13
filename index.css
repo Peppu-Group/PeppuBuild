@@ -37,15 +37,14 @@ html {
     font-size: 1px;
 }
 
-.panel__top {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    position: initial;
-    justify-content: center;
-    justify-content: space-between;
-}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
-.panel__basic-actions {
-    position: initial;
-}

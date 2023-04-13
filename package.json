@@ -17,6 +17,7 @@
     "grapesjs-plugin-ckeditor5": "^0.0.33",
     "grapesjs-preset-webpage": "^1.0.2",
     "i": "^0.3.7",
+    "netlify-identity-widget": "^1.9.2",
     "npm": "^9.6.4"
   }
 }

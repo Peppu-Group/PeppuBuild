@@ -1,4 +1,5 @@
 
+
 var editor = grapesjs.init({
     height: '100%',
     showOffsets: true,
@@ -17,7 +18,11 @@ var editor = grapesjs.init({
 
 editor.Panels.addButton('options',
     [{
-        id: 'save', className: 'fa fa-floppy-o icon-blank',
-        command: function (editor1, sender) { alert('Hello World') },
-        attributes: { title: 'Save Template' }
+        id: 'save', className: 'button',
+        command: publishWebsite,
+        attributes: { title: 'Publish Website' },
     },]);
+
+function publishWebsite() {
+
+}
