@@ -1,5 +1,4 @@
 
-
 var editor = grapesjs.init({
     height: '100%',
     showOffsets: true,
@@ -18,11 +17,11 @@ var editor = grapesjs.init({
 
 editor.Panels.addButton('options',
     [{
-        id: 'save', className: 'button',
-        command: publishWebsite,
-        attributes: { title: 'Publish Website' },
+        id: 'save', className:"button",
+        label: 'Publish Website',
+        command: publishWebsite
     },]);
 
 function publishWebsite() {
-
+    netlifyIdentity.open();
 }
