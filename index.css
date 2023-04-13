@@ -58,11 +58,11 @@ body,
 
         /* Theming */
         .gjs-one-bg {
-            background-color: #242A3B;
+            background-color: black;
         }
 
         .gjs-two-color {
-            color: #9ca8bb;
+            color: white;
         }
 
         .gjs-three-bg {
@@ -73,4 +73,17 @@ body,
         .gjs-four-color,
         .gjs-four-color-h:hover {
             color: #1E8FE1;
+        }
+
+        /* Style manager properties*/
+        .gjs-sm-properties{
+            font-size: 20px;
+        }
+
+        .gjs-pn-panel {
+            font-size: 20px;
+          }
+
+        .gjs-block {
+            font-size: 1px;
         }

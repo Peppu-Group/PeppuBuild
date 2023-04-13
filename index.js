@@ -72,15 +72,6 @@ var editor = grapesjs.init({
     }
 });
 
-const bm = editor.BlockManager;
-editor.on('load', () => {
-    editor.BlockManager.render([
-        bm.get('column1').set('category', ''),
-        bm.get('column2').set('category', ''),
-        bm.get('column3').set('category', ''),
-        bm.get('text').set('category', ''),
-        bm.get('image').set('category', '')
-    ])
-});
+
 
 editor.runCommand('sw-visibility');
