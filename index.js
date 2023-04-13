@@ -15,7 +15,9 @@ var editor = grapesjs.init({
     }
 });
 
-editor.on("component:selected", function(args) { args[1].set("resizable", true); });
-const selected = editor.getSelected();
-selected.remove({ temporary: true }); // temporary option will avoid removing component related styles
-editor.getWrapper().append(selected, { at: 0 });
+editor.Panels.addButton('options',
+    [{
+        id: 'save', className: 'fa fa-floppy-o icon-blank',
+        command: function (editor1, sender) { alert('Hello World') },
+        attributes: { title: 'Save Template' }
+    },]);
