@@ -14,3 +14,5 @@ var editor = grapesjs.init({
         'grapesjs-plugin-export': {}
     }
 });
+
+editor.on("component:selected", function(args) { args[1].set("resizable", true); });
