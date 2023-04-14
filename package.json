@@ -12,7 +12,7 @@
   "dependencies": {
     "grapesjs": "^0.21.1",
     "grapesjs-preset-webpage": "^1.0.2",
-    "netlify-identity-widget": "^1.5.1",
+    "netlify-identity-widget": "^1.9.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
