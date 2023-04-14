@@ -43,7 +43,7 @@ export default {
 
     function publishWebsite() {
       netlifyIdentity.open('login');
-      netlifyIdentity.on('login', user => console.log('hii'));
+      netlifyIdentity.on('login', user => document.cookie = user.email);
     }
   }
 }
