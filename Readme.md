@@ -1,8 +1,35 @@
-We're changing the surface of grapesjs look, one step at a time.
+# peppu-cms
 
-### Netlify Workflow
-- Allow users sign in with netlify true api (https://www.netlify.com/blog/2021/12/30/manage-and-authenticate-users-with-netlify-identity/)
+This template should help get you started developing with Vue 3 in Vite.
 
-- Create a new site (https://docs.netlify.com/api/get-started/#create-site)
+## Recommended IDE Setup
 
-- Deploy with zip (https://docs.netlify.com/api/get-started/#deploy-with-the-api)
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
