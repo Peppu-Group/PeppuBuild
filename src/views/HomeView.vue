@@ -43,7 +43,8 @@ export default {
 
     function publishWebsite() {
       netlifyIdentity.open('login');
-      let accessToken =  window.localStorage.getItem('gotrue.user');
+      let item =  window.localStorage.getItem('gotrue.user');
+      let accessToken = JSON.parse(item);
       console.log(accessToken.token.access_token);
     }
   }
