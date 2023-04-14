@@ -1,3 +1,4 @@
+import { netlifyIdentity } from 'netlify-identity-widget';
 
 var editor = grapesjs.init({
     height: '100%',
