@@ -44,7 +44,7 @@ export default {
     function publishWebsite() {
       netlifyIdentity.open('login');
       let accessToken =  window.localStorage.getItem('gotrue.user');
-      console.log(accessToken);
+      console.log(accessToken.token.access_token);
     }
   }
 }
