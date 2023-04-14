@@ -15,7 +15,7 @@ var editor = grapesjs.init({
     }
 });
 
-editor.Panels.addButton('options',
+editor.Panels.addButton('devices-c',
     [{
         id: 'save', className:"button",
         label: 'Publish Website',
