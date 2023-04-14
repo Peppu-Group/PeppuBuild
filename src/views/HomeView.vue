@@ -42,8 +42,9 @@ export default {
       },]);
 
     function publishWebsite() {
-      netlifyIdentity.open()
+      netlifyIdentity.open('login')
       netlifyIdentity.on('login', user => console.log('login', user));
+      console.log('hello');
     }
   }
 }
