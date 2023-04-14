@@ -45,7 +45,7 @@ export default {
       netlifyIdentity.open('login');
       let item =  window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
-      console.log(accessToken);
+      console.log(accessToken.token.access_token);
     }
   }
 }
