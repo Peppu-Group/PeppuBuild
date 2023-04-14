@@ -8,6 +8,7 @@ import 'grapesjs/dist/css/grapes.min.css'
 import 'grapesjs/dist/grapes.min.js'
 import plugin from 'grapesjs-preset-webpage';
 import netlifyIdentity from 'netlify-identity-widget';
+import { NetlifyAPI } from 'netlify'
 
 export default {
   name: 'HomeView',
@@ -45,7 +46,9 @@ export default {
       netlifyIdentity.open('login');
       let item =  window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
-      console.log(accessToken.token.access_token);
+      let client = new NetlifyAPI(accessToken.token.access_token)
+      let sites = await client.listSites();
+      console.log(sites);
     }
   }
 }
