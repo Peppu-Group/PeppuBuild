@@ -13,7 +13,7 @@ import { NetlifyAPI } from 'netlify'
 export default {
   name: 'HomeView',
 
-  async mounted() {
+   mounted() {
     netlifyIdentity.init({
       APIUrl: "",
       logo: true // you can try false and see what happens
@@ -42,7 +42,7 @@ export default {
         command: publishWebsite
       },]);
 
-    function publishWebsite() {
+    async function publishWebsite() {
       netlifyIdentity.open('login');
       let item =  window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
