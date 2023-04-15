@@ -8,12 +8,12 @@ import 'grapesjs/dist/css/grapes.min.css'
 import 'grapesjs/dist/grapes.min.js'
 import plugin from 'grapesjs-preset-webpage';
 import netlifyIdentity from 'netlify-identity-widget';
-import { NetlifyAPI } from 'netlify'
+import axios from 'axios';
 
 export default {
   name: 'HomeView',
 
-   mounted() {
+  mounted() {
     netlifyIdentity.init({
       APIUrl: "",
       logo: true // you can try false and see what happens
@@ -43,12 +43,33 @@ export default {
       },]);
 
     async function publishWebsite() {
+      /* 
       netlifyIdentity.open('login');
       let item =  window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
       let client = new NetlifyAPI(accessToken.token.access_token)
       let sites = await client.listSites();
       console.log(sites);
+      */
+      netlifyIdentity.open('login');
+      let item = window.localStorage.getItem('gotrue.user');
+      let accessToken = JSON.parse(item);
+      // let client = new NetlifyAPI(accessToken.token.access_token)
+      // Headers object
+      let headers = { 'Content-Type': "application/zip", 'Authorization': `Bearer ${accessToken.token.access_token}` };
+
+      // Body
+      let body = {'name': 'cherry'}
+
+      // URL
+      let url = 'https://api.netlify.com/api/v1/sites'
+
+      // Request
+      let results = await axios.post(url, body, { headers });
+      
+      // Showing results
+      console.log(results);
+
     }
   }
 }
