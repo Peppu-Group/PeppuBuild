@@ -51,11 +51,12 @@ export default {
       let sites = await client.listSites();
       console.log(sites);
       */
+      netlifyIdentity.open('login');
       let item = window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
       // let client = new NetlifyAPI(accessToken.token.access_token)
       // Headers object
-      let headers = { 'Content-Type': "application/zip", 'Authorization': `Bearer ${accessToken.token.access_token}` };
+      let headers = { 'Content-Type': "application/zip", 'Authorization': `Bearer ${accessToken.token}` };
 
       // Body
       let body = {'name': 'cherry'}
