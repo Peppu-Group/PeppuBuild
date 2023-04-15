@@ -51,7 +51,6 @@ export default {
       let sites = await client.listSites();
       console.log(sites);
       */
-      netlifyIdentity.open('login');
       let item = window.localStorage.getItem('gotrue.user');
       let accessToken = JSON.parse(item);
       // let client = new NetlifyAPI(accessToken.token.access_token)
