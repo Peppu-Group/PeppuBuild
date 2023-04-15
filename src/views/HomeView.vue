@@ -13,7 +13,7 @@ import { NetlifyAPI } from 'netlify'
 export default {
   name: 'HomeView',
 
-  mounted() {
+  async mounted() {
     netlifyIdentity.init({
       APIUrl: "",
       logo: true // you can try false and see what happens
