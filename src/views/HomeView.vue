@@ -56,7 +56,7 @@ export default {
       let accessToken = JSON.parse(item);
       // let client = new NetlifyAPI(accessToken.token.access_token)
       // Headers object
-      let headers = { 'Content-Type': "application/zip", 'Authorization': `Bearer ${accessToken.token}` };
+      let headers = {'Authorization': `Bearer ${accessToken.token.access_token}` };
 
       // Body
       let body = {'name': 'cherry'}
@@ -65,7 +65,7 @@ export default {
       let url = 'https://api.netlify.com/api/v1/sites'
 
       // Request
-      let results = await axios.post(url, body, { headers });
+      let results = await axios.get(url, { headers });
       
       // Showing results
       console.log(results);
