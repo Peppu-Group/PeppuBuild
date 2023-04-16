@@ -1,4 +1,5 @@
 <template>
+  <Authorize/>
   <div id="gjs"></div>
 </template>
 
@@ -9,69 +10,61 @@ import 'grapesjs/dist/grapes.min.js'
 import plugin from 'grapesjs-preset-webpage';
 import netlifyIdentity from 'netlify-identity-widget';
 import axios from 'axios';
+import Authorize from '../components/Authorize.vue';
 
 export default {
-  name: 'HomeView',
-
-  mounted() {
-    netlifyIdentity.init({
-      APIUrl: "",
-      logo: true // you can try false and see what happens
-    });
-
-    var editor = grapesjs.init({
-      height: '100%',
-      showOffsets: true,
-      noticeOnUnload: true,
-      storageManager: true,
-      container: '#gjs',
-      fromElement: true,
-
-      plugins: [plugin, 'gjs-blocks-basic', 'grapesjs-plugin-export'],
-      pluginsOpts: {
-        [plugin]: {},
-        'gjs-blocks-basic': {},
-        'grapesjs-plugin-export': {}
-      }
-    });
-
-    editor.Panels.addButton('devices-c',
-      [{
-        id: 'save', className: "button",
-        label: 'Publish Website',
-        command: publishWebsite
-      },]);
-
-    async function publishWebsite() {
-      /* 
-      netlifyIdentity.open('login');
-      let item =  window.localStorage.getItem('gotrue.user');
-      let accessToken = JSON.parse(item);
-      let client = new NetlifyAPI(accessToken.token.access_token)
-      let sites = await client.listSites();
-      console.log(sites);
-      */
-      netlifyIdentity.open('login');
-      let item = window.localStorage.getItem('gotrue.user');
-      let accessToken = JSON.parse(item);
-      // let client = new NetlifyAPI(accessToken.token.access_token)
-      // Headers object
-      let headers = { 'Content-Type': "application/json", 'Authorization': `Bearer ${accessToken.token.access_token}` };
-
-      // Body
-      let body = {'name': 'cherry'}
-
-      // URL
-      let url = 'https://api.netlify.com/api/v1/accounts'
-
-      // Request
-      let results = await axios.get(url, { headers });
-      
-      // Showing results
-      console.log(results);
-
-    }
-  }
+    name: "HomeView",
+    mounted() {
+        netlifyIdentity.init({
+            APIUrl: "",
+            logo: true // you can try false and see what happens
+        });
+        var editor = grapesjs.init({
+            height: "100%",
+            showOffsets: true,
+            noticeOnUnload: true,
+            storageManager: true,
+            container: "#gjs",
+            fromElement: true,
+            plugins: [plugin, "gjs-blocks-basic", "grapesjs-plugin-export"],
+            pluginsOpts: {
+                [plugin]: {},
+                "gjs-blocks-basic": {},
+                "grapesjs-plugin-export": {}
+            }
+        });
+        editor.Panels.addButton("devices-c", [{
+                id: "save",
+                className: "button",
+                label: "Publish Website",
+                command: publishWebsite
+            },]);
+        async function publishWebsite() {
+            /*
+            netlifyIdentity.open('login');
+            let item =  window.localStorage.getItem('gotrue.user');
+            let accessToken = JSON.parse(item);
+            let client = new NetlifyAPI(accessToken.token.access_token)
+            let sites = await client.listSites();
+            console.log(sites);
+            */
+            netlifyIdentity.open("login");
+            let item = window.localStorage.getItem("gotrue.user");
+            let accessToken = JSON.parse(item);
+            // let client = new NetlifyAPI(accessToken.token.access_token)
+            // Headers object
+            let headers = { "Content-Type": "application/json", "Authorization": `Bearer ${accessToken.token.access_token}` };
+            // Body
+            let body = { "name": "cherry" };
+            // URL
+            let url = "https://api.netlify.com/api/v1/accounts";
+            // Request
+            let results = await axios.get(url, { headers });
+            // Showing results
+            console.log(results);
+        }
+    },
+    components: { Authorize }
 }
 </script>
 
