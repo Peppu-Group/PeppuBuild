@@ -1,5 +1,5 @@
 <template>
-    <button @click="auth">Authorise</button>
+   <button @click="auth">Authorize</button>
 </template>
 
 <script>
@@ -12,13 +12,13 @@ export default {
         async auth() {
             let state = null;
             let clientId = 'k7RNYuUbYsS1Rb99qz74DMA1F1NWHUaW2fw5dSE-URI';
-            let redirectURI = 'https://peppubuild.netlify.app/';
+            let redirectURI = 'http://127.0.0.1:5173/';
             let uri = 'https://app.netlify.com/authorize?' +
                 'client_id=' + clientId +
                 '&response_type=token' +
                 '&redirect_uri=' + redirectURI +
                 '&state=' + state;
-            axios.get(uri);
+            return window.location.href = uri;
         }
     }
 }
