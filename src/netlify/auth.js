@@ -1,8 +1,8 @@
-export async function auth() {
-    console.log('hannydevelop')
+export function authorise() {
+    return handleAccessToken();
 }
 
-async function handleAccessToken() {
+function handleAccessToken() {
     // The access token is returned in the hash part of the document.location
     // We'll return access token only
    
@@ -27,5 +27,4 @@ async function handleAccessToken() {
     // Store token in local storage.
      localStorage.setItem('autoken', response.response.access_token);
 
-    console.log('abc');
 }
