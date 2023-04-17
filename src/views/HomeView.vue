@@ -15,10 +15,12 @@ import Authorize from '../components/Authorize.vue';
 export default {
     name: "HomeView",
     mounted() {
+      /** 
         netlifyIdentity.init({
             APIUrl: "",
             logo: true // you can try false and see what happens
         });
+        */
         var editor = grapesjs.init({
             height: "100%",
             showOffsets: true,
@@ -48,6 +50,7 @@ export default {
             let sites = await client.listSites();
             console.log(sites);
             */
+           /* 
             netlifyIdentity.open("login");
             let item = window.localStorage.getItem("gotrue.user");
             let accessToken = JSON.parse(item);
@@ -62,6 +65,7 @@ export default {
             let results = await axios.get(url, { headers });
             // Showing results
             console.log(results);
+            */
         }
     },
     components: { Authorize }

@@ -1,12 +1,14 @@
-export async function auth() {
-    console.log('hannydevelop')
-}
+<template>
+<div><h1>Hello World</h1></div>
+</template>
 
-async function handleAccessToken() {
-    // The access token is returned in the hash part of the document.location
-    // We'll return access token only
-   
-    const response = document.location.hash.replace(/^#/, '').split('&').reduce((result, pair) => {
+<script>
+import { auth } from '../netlify/auth'
+
+export default {
+    name: "HomeView",
+    mounted() {
+        const response = document.location.hash.replace(/^#/, '').split('&').reduce((result, pair) => {
         const keyValue = pair.split('=');
         result[keyValue[0]] = keyValue[1];
         return result;
@@ -25,7 +27,7 @@ async function handleAccessToken() {
     localStorage.removeItem(response.state);
 
     // Store token in local storage.
-     localStorage.setItem('autoken', response.response.access_token);
-
-    console.log('abc');
-}
+    let key = "autkn"
+     localStorage.setItem(key, response.access_token);
+    }}
+</script>
