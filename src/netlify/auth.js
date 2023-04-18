@@ -24,7 +24,20 @@ function handleAccessToken() {
 
     localStorage.removeItem(response.state);
 
-    // Store token in local storage.
-     localStorage.setItem('autoken', response.response.access_token);
+     // Store token in local storage.
+     let key = "autkn"
+     localStorage.setItem(key, response.access_token);
 
+     // User the token to fetch the list of sites for the user
+     fetch('https://api.netlify.com/api/v1/sites', {
+         headers: {
+             'Authorization': 'Bearer ' + response.access_token
+         }
+     }).then((response) => {
+         response.json().then((json) => {
+             console.log('Your sites: ' + json.map((site) => `<a href="${site.url}">${site.url}</a>`).join(','));
+         });
+     }).catch((error) => {
+         console.log(`Error fetching sites: ${error}`);
+     });
 }

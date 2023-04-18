@@ -1,5 +1,4 @@
 <template>
-  <Authorize/>
   <div id="gjs"></div>
 </template>
 
@@ -7,71 +6,88 @@
 import grapesjs from 'grapesjs'
 import 'grapesjs/dist/css/grapes.min.css'
 import 'grapesjs/dist/grapes.min.js'
+import 'grapesjs-preset-webpage/dist/index'
 import plugin from 'grapesjs-preset-webpage';
-import netlifyIdentity from 'netlify-identity-widget';
-import axios from 'axios';
-import Authorize from '../components/Authorize.vue';
+import { auth } from '../netlify/redirect'
 
 export default {
-    name: "HomeView",
-    mounted() {
-      /** 
-        netlifyIdentity.init({
-            APIUrl: "",
-            logo: true // you can try false and see what happens
-        });
-        */
-        var editor = grapesjs.init({
-            height: "100%",
-            showOffsets: true,
-            noticeOnUnload: true,
-            storageManager: true,
-            container: "#gjs",
-            fromElement: true,
-            plugins: [plugin, "gjs-blocks-basic", "grapesjs-plugin-export"],
-            pluginsOpts: {
-                [plugin]: {},
-                "gjs-blocks-basic": {},
-                "grapesjs-plugin-export": {}
-            }
-        });
-        editor.Panels.addButton("devices-c", [{
-                id: "save",
-                className: "button",
-                label: "Publish Website",
-                command: publishWebsite
-            },]);
-        async function publishWebsite() {
-            /*
-            netlifyIdentity.open('login');
-            let item =  window.localStorage.getItem('gotrue.user');
-            let accessToken = JSON.parse(item);
-            let client = new NetlifyAPI(accessToken.token.access_token)
-            let sites = await client.listSites();
-            console.log(sites);
-            */
-           /* 
-            netlifyIdentity.open("login");
-            let item = window.localStorage.getItem("gotrue.user");
-            let accessToken = JSON.parse(item);
-            // let client = new NetlifyAPI(accessToken.token.access_token)
-            // Headers object
-            let headers = { "Content-Type": "application/json", "Authorization": `Bearer ${accessToken.token.access_token}` };
-            // Body
-            let body = { "name": "cherry" };
-            // URL
-            let url = "https://api.netlify.com/api/v1/accounts";
-            // Request
-            let results = await axios.get(url, { headers });
-            // Showing results
-            console.log(results);
-            */
-        }
-    },
-    components: { Authorize }
+  name: 'HomeView',
+
+  mounted() {
+    var editor = grapesjs.init({
+      container: '#gjs',
+      height: '1000px',
+      width: '100%',
+      plugins: [plugin],
+      storageManager: true,
+      deviceManager: {
+        devices:
+          [
+            {
+              id: 'desktop',
+              name: 'Desktop',
+              width: '',
+            },
+            {
+              id: 'tablet',
+              name: 'Tablet',
+              width: '768px',
+              widthMedia: '992px',
+            },
+            {
+              id: 'mobilePortrait',
+              name: 'Mobile portrait',
+              width: '320px',
+              widthMedia: '575px',
+            },
+          ]
+      },
+      pluginsOpts: {
+        'grapesjs-preset-webpage': {
+          blocksBasicOpts: {
+            blocks: ['column1', 'column2', 'column3', 'column3-7', 'text', 'link', 'image', 'video'],
+            flexGrid: 1,
+          },
+          blocks: ['link-block', 'quote', 'text-basic'],
+        },
+      }
+    });
+    editor.Panels.addButton("devices-c", [{
+      id: "save",
+      className: "button",
+      label: "Publish Website",
+      command: publishWebsite
+    },]);
+    async function publishWebsite() {
+      /*
+      netlifyIdentity.open('login');
+      let item =  window.localStorage.getItem('gotrue.user');
+      let accessToken = JSON.parse(item);
+      let client = new NetlifyAPI(accessToken.token.access_token)
+      let sites = await client.listSites();
+      console.log(sites);
+      */
+      /* 
+       netlifyIdentity.open("login");
+       let item = window.localStorage.getItem("gotrue.user");
+       let accessToken = JSON.parse(item);
+       // let client = new NetlifyAPI(accessToken.token.access_token)
+       // Headers object
+       let headers = { "Content-Type": "application/json", "Authorization": `Bearer ${accessToken.token.access_token}` };
+       // Body
+       let body = { "name": "cherry" };
+       // URL
+       let url = "https://api.netlify.com/api/v1/accounts";
+       // Request
+       let results = await axios.get(url, { headers });
+       // Showing results
+       console.log(results);
+       */
+      return auth.call()
+    }
+  }
 }
 </script>
-
 <style>
 body,
 html {
@@ -123,5 +139,4 @@ html {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-</style>
+}</style>
