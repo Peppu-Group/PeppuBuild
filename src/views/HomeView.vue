@@ -44,10 +44,6 @@ export default {
       },
       pluginsOpts: {
         'grapesjs-preset-webpage': {
-          blocksBasicOpts: {
-            blocks: ['column1', 'column2', 'column3', 'column3-7', 'text', 'link', 'image', 'video'],
-            flexGrid: 1,
-          },
           blocks: ['link-block', 'quote', 'text-basic'],
         },
       }
