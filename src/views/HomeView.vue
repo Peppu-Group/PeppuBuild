@@ -20,7 +20,7 @@ export default {
       height: '1000px',
       width: '100%',
       plugins: [plugin, grapesjsblocks],
-      storageManager: false,
+      storageManager: true,
       deviceManager: {
         devices:
           [
