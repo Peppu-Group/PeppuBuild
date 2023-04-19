@@ -8,6 +8,7 @@ import 'grapesjs/dist/css/grapes.min.css'
 import 'grapesjs/dist/grapes.min.js'
 import 'grapesjs-preset-webpage/dist/index'
 import plugin from 'grapesjs-preset-webpage';
+import grapesjsblocks from 'grapesjs-blocks-basic';
 import { auth } from '../netlify/redirect'
 
 export default {
@@ -18,8 +19,8 @@ export default {
       container: '#gjs',
       height: '1000px',
       width: '100%',
-      plugins: [plugin],
-      storageManager: true,
+      plugins: [plugin, grapesjsblocks],
+      storageManager: false,
       deviceManager: {
         devices:
           [
@@ -43,9 +44,8 @@ export default {
           ]
       },
       pluginsOpts: {
-        'grapesjs-preset-webpage': {
-          blocks: ['link-block', 'quote', 'text-basic'],
-        },
+        'grapesjs-preset-webpage': {},
+        'grapesjs-blocks-basic': {}
       }
     });
     editor.Panels.addButton("devices-c", [{
@@ -63,6 +63,8 @@ export default {
         class: "fa fa-square"
       }
     });
+    bm.remove('link-block');
+    bm.remove('quote');
 
     async function publishWebsite() {
       /*
