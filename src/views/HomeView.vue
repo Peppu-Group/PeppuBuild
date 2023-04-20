@@ -1,5 +1,5 @@
 <template>
-  <div id="gjs"></div>
+  <div id="gjs" style= "overflow:hidden"></div>
 </template>
 
 <script>
@@ -9,6 +9,7 @@ import 'grapesjs/dist/grapes.min.js'
 import 'grapesjs-preset-webpage/dist/index'
 import plugin from 'grapesjs-preset-webpage';
 import grapesjsblocks from 'grapesjs-blocks-basic';
+import grapesnav from 'grapesjs-navbar'
 import { auth } from '../netlify/redirect'
 
 export default {
@@ -19,34 +20,12 @@ export default {
       container: '#gjs',
       height: '1000px',
       width: '100%',
-      plugins: [plugin, grapesjsblocks],
+      plugins: [plugin, grapesjsblocks, grapesnav],
       storageManager: true,
-      dragMode: 'translate',
-      deviceManager: {
-        devices:
-          [
-            {
-              id: 'desktop',
-              name: 'Desktop',
-              width: '',
-            },
-            {
-              id: 'tablet',
-              name: 'Tablet',
-              width: '768px',
-              widthMedia: '992px',
-            },
-            {
-              id: 'mobilePortrait',
-              name: 'Mobile portrait',
-              width: '320px',
-              widthMedia: '575px',
-            },
-          ]
-      },
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
-        'grapesjs-blocks-basic': {}
+        'grapesjs-blocks-basic': {},
+        'grapesjs-navbar': {}
       }
     });
     editor.Panels.addButton("devices-c", [{
@@ -66,6 +45,8 @@ export default {
     });
     bm.remove('link-block');
     bm.remove('quote');
+
+    
 
     async function publishWebsite() {
       /*
@@ -126,11 +107,11 @@ html {
 
 /* Style manager properties*/
 .gjs-sm-properties {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .gjs-pn-panel {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .gjs-block {
