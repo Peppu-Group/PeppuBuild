@@ -38,11 +38,11 @@ export default {
     bm.add("social-sign-in-butttons-section", {
       label: "Button",
       content:
-        '<div><button class="button">Yee</button></div><style>.button{background-color: #4CAF50;border: none;color: white;padding: 20px 30px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;} .button:hover {background-color: white; color-green;}',
+        '<div><button data-gjs-resizable="true" class="button">Yee</button></div><style>.button{background-color: #4CAF50;border: none;color: white;padding: 20px 30px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;} .button:hover {background-color: white; color-green;}',
       attributes: {
         class: "fa fa-square"
       },
-      category: 'Basic'
+      category: 'Basic',
     });
     bm.remove('link-block');
     bm.remove('quote');
