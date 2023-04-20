@@ -42,6 +42,7 @@ export default {
       attributes: {
         class: "fa fa-square"
       },
+      category: 'Basic'
     });
     bm.remove('link-block');
     bm.remove('quote');
