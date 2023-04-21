@@ -37,8 +37,7 @@ export default {
     const bm = editor.BlockManager;
     bm.add("social-sign-in-butttons-section", {
       label: "Button",
-      content:
-        '<button data-gjs-resizable="true" class="button">Yee</button><style>.button{background-color: #4CAF50;max-width: 100%;border: none;color: white;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;} .button:hover {background-color: white; color-green;}',
+      content: {type: 'image', src: `https://i.ibb.co/8BCBPZK/IMG-2437-1.png`},
       attributes: {
         class: "fa fa-square"
       },
