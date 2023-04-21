@@ -1,5 +1,5 @@
 <template>
-  <div id="gjs" style= "overflow:hidden"></div>
+  <div id="gjs" style="overflow:hidden"></div>
 </template>
 
 <script>
@@ -37,7 +37,13 @@ export default {
     const bm = editor.BlockManager;
     bm.add("social-sign-in-butttons-section", {
       label: "Button",
-      content: {type: 'image', src: `https://i.ibb.co/8BCBPZK/IMG-2437-1.png`},
+      /*
+      content: [
+        { type: 'image' },
+        `<div>Extra</div>`
+      ],
+      */
+      traits: [{ type: 'image', src: `https://i.ibb.co/8BCBPZK/IMG-2437-1.png` }],
       attributes: {
         class: "fa fa-square"
       },
