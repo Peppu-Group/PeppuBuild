@@ -1,5 +1,5 @@
 <template>
-  <div id="gjs" style="overflow:hidden"></div>
+  <div id="gjs" style="overflow: hidden"></div>
 </template>
 
 <script>
@@ -7,8 +7,8 @@ import grapesjs from 'grapesjs'
 import 'grapesjs/dist/css/grapes.min.css'
 import 'grapesjs/dist/grapes.min.js'
 import 'grapesjs-preset-webpage/dist/index'
-import plugin from 'grapesjs-preset-webpage';
-import grapesjsblocks from 'grapesjs-blocks-basic';
+import plugin from 'grapesjs-preset-webpage'
+import grapesjsblocks from 'grapesjs-blocks-basic'
 import grapesnav from 'grapesjs-navbar'
 import { auth } from '../netlify/redirect'
 
@@ -17,11 +17,10 @@ export default {
 
   mounted() {
     // create navbar component since inline can't contain js
-    const myNewComponentTypes = editor => {
-      editor.DomComponents.addType(
-        'my-input-type', {
+    const myNewComponentTypes = (editor) => {
+      editor.DomComponents.addType('my-input-type', {
         // Make the editor understand when to bind `my-input-type`
-        isComponent: el => el.tagName === 'INPUT',
+        isComponent: (el) => el.tagName === 'INPUT',
 
         // Model definition
         model: {
@@ -33,9 +32,9 @@ export default {
                 tagName: 'span',
                 type: 'text',
                 attributes: { title: 'foo' },
-                components: [{
-                  content: 
-                  `<div class="topnav" id="myTopnav">
+                components: [
+                  {
+                    content: `<div class="topnav" id="myTopnav">
           <a href="#">
             <img class='img' src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"></img>
             </a>
@@ -95,21 +94,22 @@ export default {
   }
     </style>
     `
-                }]
+                  }
+                ]
               }
             ],
             script: function myFunction() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
+              var x = document.getElementById('myTopnav')
+              if (x.className === 'topnav') {
+                x.className += ' responsive'
               } else {
-                x.className = "topnav";
+                x.className = 'topnav'
               }
             }
           }
         }
-      });
-    };
+      })
+    }
 
     var editor = grapesjs.init({
       container: '#gjs',
@@ -122,21 +122,23 @@ export default {
         'grapesjs-blocks-basic': {},
         'grapesjs-navbar': {}
       }
-    });
-    editor.Panels.addButton("devices-c", [{
-      id: "save",
-      className: "button",
-      label: "Publish Website",
-      command: publishWebsite
-    },]);
-    const bm = editor.BlockManager;
+    })
+    editor.Panels.addButton('devices-c', [
+      {
+        id: 'save',
+        className: 'button',
+        label: 'Publish Website',
+        command: publishWebsite
+      }
+    ])
+    const bm = editor.BlockManager
     // A block for the custom component
     bm.add('my-input-type', {
       label: 'Test Component',
       content: { type: 'my-input-type' }
-    });
-    bm.add("social-sign-in-butttons-section", {
-      label: "Button",
+    })
+    bm.add('social-sign-in-butttons-section', {
+      label: 'Button',
       /*
       content: [
         { type: 'image' },
@@ -207,14 +209,12 @@ export default {
       ],
       traits: [{ type: 'image', src: `https://i.ibb.co/8BCBPZK/IMG-2437-1.png` }],
       attributes: {
-        class: "fa fa-square"
+        class: 'fa fa-square'
       },
-      category: 'Basic',
-    });
-    bm.remove('link-block');
-    bm.remove('quote');
-
-
+      category: 'Basic'
+    })
+    bm.remove('link-block')
+    bm.remove('quote')
 
     async function publishWebsite() {
       /*
@@ -264,13 +264,13 @@ html {
 }
 
 .gjs-three-bg {
-  background-color: #4CAF50 !important;
+  background-color: #4caf50 !important;
   color: white !important;
 }
 
 .gjs-four-color,
 .gjs-four-color-h:hover {
-  color: #4CAF50 !important;
+  color: #4caf50 !important;
 }
 
 /* Style manager properties*/
@@ -291,7 +291,7 @@ html {
   background-color: white;
   /* Green */
   border: none;
-  color: #4CAF50;
+  color: #4caf50;
   padding: 5px 30px;
   text-align: center;
   text-decoration: none;
