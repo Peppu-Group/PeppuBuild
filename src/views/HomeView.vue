@@ -280,6 +280,31 @@ display: block;
       },
       category: 'Blocks'
     })
+
+    // create section one
+    editor.Components.addType('section-one', {
+      // Make the editor understand when to bind `my-input-type`
+
+      // Model definition
+      model: {
+        // Default properties
+        defaults: {
+          tagName: 'section-one',
+          components: ``,
+          styles: ``,
+        }
+      }
+    })
+
+    // A block for the custom component
+    bm.add('section-one', {
+      label: 'section-one',
+      content: { type: 'section-one' },
+      attributes: {
+        class: 'fa fa-file-excel-o'
+      },
+      category: 'Blocks'
+    })
     
     bm.add('social-sign-in-butttons-section', {
       label: 'Button',
