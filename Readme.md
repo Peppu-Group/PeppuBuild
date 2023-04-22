@@ -33,3 +33,7 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Todo
+- Create Navbar for component with shadow. Allow burger for mobile mode.
+- Create a footer component.
