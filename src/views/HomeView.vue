@@ -29,11 +29,6 @@
               }
           })
 
-          const script = function () {
-              alert('Hi');
-              // `this` is bound to the component element
-              console.log('the element', this);
-          };
           // create navbar component since inline can't contain js
           editor.Components.addType('footer', {
               // Make the editor understand when to bind `my-input-type`
@@ -50,8 +45,8 @@
             <h3>Foolish Developer</h3>
             <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
             <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" class="fa fa-facebook"><i ></i></a></li>
+                <li><a href="#" class="fa fa-twitter"><i ></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
@@ -83,6 +78,9 @@
 
     padding-top: 40px;
     color: #fff;
+}
+.white {
+  color: white;
 }
 .footer-content{
     display: flex;
@@ -201,7 +199,11 @@ display: block;
           // A block for the custom component
           bm.add('footer', {
               label: 'Footer',
-              content: { type: 'footer' }
+              content: { type: 'footer' },
+              attributes: {
+                  class: 'fa fa-sign-out'
+              },
+              category: 'Footer'
           })
           bm.add('social-sign-in-butttons-section', {
               label: 'Button',
