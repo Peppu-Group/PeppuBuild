@@ -20,7 +20,7 @@ export default {
       container: '#gjs',
       height: '1000px',
       width: '100%',
-      plugins: [plugin,  grapesnav],
+      plugins: [plugin, grapesnav],
       storageManager: true,
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
@@ -203,8 +203,8 @@ display: block;
       category: 'Footer'
     })
 
-      // create hero section
-      editor.Components.addType('hero', {
+    // create hero section
+    editor.Components.addType('hero', {
       // Make the editor understand when to bind `my-input-type`
 
       // Model definition
@@ -305,7 +305,60 @@ display: block;
       },
       category: 'Blocks'
     })
-    
+
+    // create section two
+    editor.Components.addType('section-two', {
+      // Make the editor understand when to bind `my-input-type`
+
+      // Model definition
+      model: {
+        // Default properties
+        defaults: {
+          tagName: 'section-two',
+          components: `
+          <div class="container">
+            <div class="box">
+              <img class="img" src=""></img>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
+                Maecenas at urna eu tortor fringilla ultrices. 
+                Curabitur odio mauris, rutrum id eleifend ac, sodales at lacus. 
+                In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
+                Pellentesque non faucibus nisi, non tincidunt diam.
+              </p>
+            </div
+            </div>
+          `,
+          styles: `
+          .container {
+            height: auto;
+            width: 100vw;
+          }
+
+          .box .img{
+            width: 70px;
+            height: 70px;
+          }
+
+          .box {
+            float: left;
+            display: block;
+          }
+          `,
+        }
+      }
+    })
+
+    // A block for the custom component
+    bm.add('section-two', {
+      label: 'section-two',
+      content: { type: 'section-two' },
+      attributes: {
+        class: 'fa fa-file-powerpoint-o'
+      },
+      category: 'Blocks'
+    })
+
     bm.add('social-sign-in-butttons-section', {
       label: 'Button',
       /*
@@ -382,7 +435,7 @@ display: block;
       },
       category: 'Basic'
     })
-    
+
     bm.remove('link-block')
     bm.remove('quote')
 
