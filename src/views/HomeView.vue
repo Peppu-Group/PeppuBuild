@@ -290,8 +290,43 @@ display: block;
         // Default properties
         defaults: {
           tagName: 'section-one',
-          components: ``,
-          styles: ``,
+          components: `
+          <div class="one-container">
+            <div class="one-child">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
+                Maecenas at urna eu tortor fringilla ultrices. 
+                Curabitur odio mauris, rutrum id eleifend ac, sodales at lacus. 
+                In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
+                Pellentesque non faucibus nisi, non tincidunt diam.
+              </p>
+            </div
+            <div class="one-child two">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
+                Maecenas at urna eu tortor fringilla ultrices. 
+                Curabitur odio mauris, rutrum id eleifend ac, sodales at lacus. 
+                In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
+                Pellentesque non faucibus nisi, non tincidunt diam.
+              </p>
+            </div>
+          </div>
+          `,
+          styles: `
+          .one-container {
+            display: flex;
+            width: 100%
+          }
+
+          
+          @media screen and (max-width: 800px) {
+            .one-container {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            }
+          }
+          `,
         }
       }
     })
@@ -329,7 +364,7 @@ display: block;
                 Pellentesque non faucibus nisi, non tincidunt diam.
               </p>
             </div>
-            </div>
+          </div>
           `,
           styles: `
           .container {
@@ -352,8 +387,6 @@ display: block;
             width: 100%;
             padding: 20px;
             }
-            
-            
           }
           `,
         }
