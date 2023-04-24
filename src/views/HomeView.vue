@@ -317,8 +317,10 @@ display: block;
           tagName: 'section-two',
           components: `
           <div class="container">
-            <div class="box">
+            <div class="child">
               <img class="img" src=""></img>
+            </div
+            <div class="child">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
                 Maecenas at urna eu tortor fringilla ultrices. 
@@ -326,23 +328,23 @@ display: block;
                 In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
                 Pellentesque non faucibus nisi, non tincidunt diam.
               </p>
-            </div
+            </div>
             </div>
           `,
           styles: `
           .container {
-            height: auto;
-            width: 100vw;
+            display: flex;
+            width: 100%;
           }
 
-          .box .img{
-            width: 70px;
-            height: 70px;
+          .child {
+            margin: 30px;
+            text-align: center;
           }
 
-          .box {
-            float: left;
-            display: block;
+          .img {
+            max-width: 50vw;
+            max-height: 30vw;
           }
           `,
         }
