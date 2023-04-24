@@ -67,7 +67,7 @@ export default {
     </footer>
       `,
           styles: `
-      footer{
+    footer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -213,7 +213,7 @@ display: block;
         defaults: {
           tagName: 'hero',
           components: `
-          <div class="container">
+          <div class="contain">
             <div class="text">
               <div class="big">Hello, my name is Ali</div>
               <div class="small">Welcome to my website</div>
@@ -225,7 +225,7 @@ display: block;
           </div>
           `,
           styles: `
-          .container {
+          .contain {
             height: auto;
             width: 100vw;
             background-color: #111;
