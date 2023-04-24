@@ -42,8 +42,14 @@ export default {
           components: `
             <footer>
         <div class="footer-content">
-            <h3>Foolish Developer</h3>
-            <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
+            <h3>Builder Created With Grapesjs</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
+                Maecenas at urna eu tortor fringilla ultrices. 
+                Curabitur odio mauris, rutrum id eleifend ac, sodales at lacus. 
+                In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
+                Pellentesque non faucibus nisi, non tincidunt diam.
+            </p>
             <ul class="socials">
                 <img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"></img>
                 <li><a href="#" class="fa fa-twitter"><i ></i></a></li>
@@ -53,15 +59,7 @@ export default {
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy; <a href="#">Foolish Developer</a>  </p>
-                    <div class="footer-menu">
-                      <ul class="f-menu">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Blog</a></li>
-                      </ul>
-                    </div>
+            <p>copyright &copy; <a href="#">Made with Peppudraw</a> </p>
         </div>
 
     </footer>
@@ -136,20 +134,14 @@ export default {
     background: #000;
     width: 100vw;
     padding: 20px;
-padding-bottom: 40px;
+    padding-bottom: 40px;
     text-align: center;
 }
-.footer-bottom p{
-float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
+
+.footer-bottom a{
+  color: green;
 }
-.footer-bottom p a{
-  color:#44bae8;
-  font-size: 16px;
-  text-decoration: none;
-}
+
 .footer-bottom span{
     text-transform: uppercase;
     opacity: .4;
