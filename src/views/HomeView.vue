@@ -45,7 +45,7 @@ export default {
             <h3>Foolish Developer</h3>
             <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
             <ul class="socials">
-                <li><a href="#" class="fa fa-facebook"><i ></i></a></li>
+                <img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"></img>
                 <li><a href="#" class="fa fa-twitter"><i ></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
