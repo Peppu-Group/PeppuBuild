@@ -320,7 +320,7 @@ display: block;
             <div class="child">
               <img class="img" src=""></img>
             </div
-            <div class="child">
+            <div class="child two">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
                 Maecenas at urna eu tortor fringilla ultrices. 
@@ -334,7 +334,7 @@ display: block;
           styles: `
           .container {
             display: flex;
-            width: 100%;
+            width: 100%
           }
 
           .child {
@@ -345,6 +345,15 @@ display: block;
           .img {
             max-width: 50vw;
             max-height: 30vw;
+          }
+          @media screen and (max-width: 800px) {
+            .container {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            }
+            
+            
           }
           `,
         }
