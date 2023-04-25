@@ -1,57 +1,40 @@
-let editor = grapesjs.init({
-  container: '#gjs',
+var loadAd = function() {
+  if(typeof _bsa !== 'undefined' && _bsa) {
+    _bsa.init('custom', 'CK7I62QJ', 'placement:grapesjscom', {
+      target: '#native-carbon',
+      template: '<div id="carbonads">' +
+          '<a class="carbon-link" href="##link##" target="_blank" rel="noopener">'+
+            '<span class="carbon-wrap">'+
+              '<span class="carbon-img">'+
+                '<img src="##logo##" alt="" border="0" style="max-width: 130px; padding: 10px; background-color: ##backgroundColor##">'+
+              '</span>'+
+              '<span class="carbon-text">##description##</span>'+
+              '<div class="carbon-cta-c">'+
+                '<span class="carbon-cta" style="background-color: ##ctaBackgroundColor##; color: ##ctaTextColor##">##callToAction##</span>'+
+              '</div>'+
+            '</span>'+
+          '</a>'+
+        '</div>',
+    });
+  }
+};
 
-  width: '100%',
-  storageManager: true,
-    blockManager: {
-      appendTo: '#blocks',
-      blocks: [
-        {
-          id: 'section', // id is mandatory
-          label: '<b>Section</b>', // You can use HTML/SVG inside labels
-          attributes: { class:'gjs-block-section' },
-          content: `<section>
-            <h1>This is a simple title</h1>
-            <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
-          </section>`,
-        }, {
-          id: 'text',
-          label: 'Text',
-          content: '<div data-gjs-type="text">Insert your text here</div>',
-        }, {
-          id: 'image',
-          label: 'Image',
-          // Select the component once it's dropped
-          select: true,
-          // You can pass components as a JSON instead of a simple HTML string,
-          // in this case we also use a defined component type `image`
-          content: { type: 'image' },
-          // This triggers `active` event on dropped components and the `image`
-          // reacts by opening the AssetManager
-          activate: true,
-        }
-      ]
-    },
-  });
+var loadScript = function(src, clb) {
+  var scr = document.createElement('script');
+  scr.src = src;
+  clb && (scr.onload = clb);
+  document.head.appendChild(scr);
+  return scr;
+};
 
-  let bm = editor.blockManager;
-  bm.add("social-sign-in-butttons-section", {
-    label: "Button",
-   
-    content: [
-      `<div class="topnav" id="myTopnav">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-      <img class='img' src="" alt="mee"></img>
-    </div>`
-    ],
-    attributes: {
-      class: "fa fa-square"
-    },
-    category: 'Basic',
-  });
+function BSANativeCallback (a) {
+  var total = a.ads.length;
+  if (!total) {
+    var script = loadScript('//cdn.carbonads.com/carbon.js?serve=CEAIVK77&placement=grapesjscom');
+    script.setAttribute('id', '_carbonads_js');
+    var adCont = document.getElementById('native-carbon');
+    adCont && adCont.appendChild(script);
+  }
+}
+
+loadScript('//m.servedby-buysellads.com/monetization.js', loadAd);

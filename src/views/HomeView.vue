@@ -21,7 +21,7 @@ export default {
       height: '1000px',
       width: '100%',
       plugins: [plugin, grapesnav],
-      storageManager: true,
+      storageManager: false,
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
         'grapesjs-blocks-basic': {},
@@ -343,6 +343,7 @@ display: block;
         defaults: {
           tagName: 'section-two',
           components: `
+          <h1 class="center">This is Section one</h1>
           <div class="container">
             <div class="child">
               <img class="img" src=""></img>
@@ -359,6 +360,9 @@ display: block;
           </div>
           `,
           styles: `
+          .center {
+            text-align: center;
+          }
           .container {
             display: flex;
             width: 100%
@@ -389,6 +393,87 @@ display: block;
     bm.add('section-two', {
       label: 'section-two',
       content: { type: 'section-two' },
+      attributes: {
+        class: 'fa fa-file-powerpoint-o'
+      },
+      category: 'Blocks'
+    })
+
+     // create section two
+     editor.Components.addType('cards', {
+      // Make the editor understand when to bind `my-input-type`
+
+      // Model definition
+      model: {
+        // Default properties
+        defaults: {
+          tagName: 'cards',
+          components: `
+          <div class="cards">
+            <div class="card">
+              <div class="card-header"></div>
+              <div class="card-body">
+                <div class="card-title">Title one</div>
+                <div class="card-sub-title">Subtitle one</div>
+                <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+              </div>
+            </div>
+          </div>
+          `,
+          styles: `
+        .cards{
+          display: flex;
+          justify-content: space-around;
+          flex-flow: wrap;
+        }
+        .card{
+          background-color: white;
+          height: 300px;
+          width:300px;
+          margin-top: 30px;
+          margin-bottom:30px;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 2px;
+          transition: all 0.5s ease;
+          font-weight: 100;
+          overflow: hidden;
+        }
+        .card:hover{
+          margin-top: -5px;
+          box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+        }
+        .card-header{
+          height: 155px;
+          background-image:url("https://via.placeholder.com/350x250/78c5d6/fff");
+          background-size:cover;
+          background-position:center center;
+        }
+        .card-body{
+          padding: 15px 15px 5px 15px;
+          color: #555;
+        }
+        .card-title{
+          font-size: 1.4em;
+          margin-bottom: 5px;
+        }
+        .card-sub-title{
+          color: #b3b3b3;
+          font-size: 1em;
+          margin-bottom: 15px;
+        }
+        .card-desc{
+          font-size: 0.85rem;
+          line-height: 17px;
+        }
+          `,
+        }
+      }
+    })
+
+    // A block for the custom component
+    bm.add('cards', {
+      label: 'cards',
+      content: { type: 'cards' },
       attributes: {
         class: 'fa fa-file-powerpoint-o'
       },
