@@ -67,7 +67,6 @@ export default {
           styles: `
     footer{
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     background: #111;
