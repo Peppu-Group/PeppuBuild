@@ -475,7 +475,7 @@ display: block;
       label: 'cards',
       content: { type: 'cards' },
       attributes: {
-        class: 'fa fa-file-powerpoint-o'
+        class: 'fa fa-building-o'
       },
       category: 'Blocks'
     })
