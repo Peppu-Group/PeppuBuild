@@ -399,7 +399,7 @@ display: block;
       category: 'Blocks'
     })
 
-     // create section two
+     // create section cards
      editor.Components.addType('cards', {
       // Make the editor understand when to bind `my-input-type`
 
@@ -474,6 +474,118 @@ display: block;
     bm.add('cards', {
       label: 'cards',
       content: { type: 'cards' },
+      attributes: {
+        class: 'fa fa-building-o'
+      },
+      category: 'Blocks'
+    })
+
+    // create section cards
+    editor.Components.addType('team', {
+      // Make the editor understand when to bind `my-input-type`
+
+      // Model definition
+      model: {
+        // Default properties
+        defaults: {
+          tagName: 'team',
+          components: `
+          <div class="badges">
+            <div class="badge">
+              <div class="badge-header"></div>
+              <img class="badge-avatar" src="img/team1.jpg">
+              <div class="badge-body">
+                <div class="badge-name">Adam Smith</div>
+                <div class="badge-role">CEO</div>
+                <div class="badge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</div>
+              </div>
+              <div class="badge-foot">
+                <span class="badge-link">f</span>
+                <span class="badge-link">t</span>
+                <span class="badge-link">ln</span>
+              </div>
+            </div>
+          </div>
+          `,
+          styles: `
+          .badges{
+          padding:20px;
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+        .badge{
+          width: 290px;
+          font-family: Helvetica, serif;
+          background-color: white;
+          margin-bottom:30px;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+          font-weight: 100;
+          overflow: hidden;
+          text-align: center;
+        }
+        .badge-header{
+          height: 115px;
+          background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+          background-position:left top, center center;
+          background-attachment:scroll, fixed;
+          overflow: hidden;
+        }
+        .badge-name{
+          font-size: 1.4em;
+          margin-bottom: 5px;
+        }
+        .badge-role{
+          color: #777;
+          font-size: 1em;
+          margin-bottom: 25px;
+        }
+        .badge-desc{
+          font-size: 0.85rem;
+          line-height: 20px;
+        }
+        .badge-avatar{
+          width:100px;
+          height:100px;
+          border-radius: 100%;
+          border: 5px solid #fff;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+          margin-top: -75px;
+          position: relative;
+        }
+        .badge-body{
+          margin: 35px 10px;
+        }
+        .badge-foot{
+          color:#fff;
+          background-color:#a290a5;
+          padding-top:13px;
+          padding-bottom:13px;
+          display: flex;
+          justify-content: center;
+        }
+        .badge-link{
+          height: 35px;
+          width: 35px;
+          line-height: 35px;
+          font-weight: 700;
+          background-color: #fff;
+          color: #a290a5;
+          display: block;
+          border-radius: 100%;
+          margin: 0 10px;
+        }
+          `,
+        }
+      }
+    })
+
+    // A block for the custom component
+    bm.add('team', {
+      label: 'team',
+      content: { type: 'team' },
       attributes: {
         class: 'fa fa-building-o'
       },
