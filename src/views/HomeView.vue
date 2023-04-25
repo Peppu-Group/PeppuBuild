@@ -493,9 +493,9 @@ display: block;
           <div class="badges">
             <div class="badge">
               <div class="badge-header"></div>
-              <img class="badge-avatar" src="img/team1.jpg">
+              <img class="badge-avatar" src="https://i.ibb.co/HnCWj2v/team3.jpg">
               <div class="badge-body">
-                <div class="badge-name">Adam Smith</div>
+                <div class="badge-name">Laura Okoro</div>
                 <div class="badge-role">CEO</div>
                 <div class="badge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</div>
               </div>
@@ -508,8 +508,7 @@ display: block;
           </div>
           `,
           styles: `
-          .badges{
-          padding:20px;
+        .badges{
           display: flex;
           justify-content: space-around;
           align-items: flex-start;
@@ -519,6 +518,7 @@ display: block;
           width: 290px;
           font-family: Helvetica, serif;
           background-color: white;
+          margin-top:30px;
           margin-bottom:30px;
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
           border-radius: 3px;
@@ -587,7 +587,7 @@ display: block;
       label: 'team',
       content: { type: 'team' },
       attributes: {
-        class: 'fa fa-building-o'
+        class: 'fa fa-user'
       },
       category: 'Blocks'
     })
