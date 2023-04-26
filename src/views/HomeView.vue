@@ -282,6 +282,7 @@ display: block;
         defaults: {
           tagName: 'section-one',
           components: `
+          <h1 class="center-one">This Text Section</h1>
           <div class="one-container">
             <div class="one-child">
               <p>
@@ -308,6 +309,10 @@ display: block;
             display: flex;
             width: 100%;
             padding: 20px;
+          }
+
+          .center-one {
+            text-align: center;
           }
 
           .one-child {
@@ -346,7 +351,7 @@ display: block;
         defaults: {
           tagName: 'section-two',
           components: `
-          <h1 class="center">This is Section one</h1>
+          <h1 class="center">This is Text - Image Section</h1>
           <div class="container">
             <div class="child">
               <img class="img" src=""></img>
