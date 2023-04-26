@@ -18,7 +18,7 @@ export default {
   mounted() {
     var editor = grapesjs.init({
       container: '#gjs',
-      height: '1000px',
+      height: '1200px',
       width: '100%',
       plugins: [plugin, grapesnav],
       storageManager: false,
