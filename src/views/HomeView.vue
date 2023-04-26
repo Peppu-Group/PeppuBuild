@@ -292,7 +292,7 @@ display: block;
                 Pellentesque non faucibus nisi, non tincidunt diam.
               </p>
             </div
-            <div class="one-child two">
+            <div class="one-child">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
                 Maecenas at urna eu tortor fringilla ultrices. 
@@ -310,7 +310,9 @@ display: block;
             padding: 20px;
           }
 
-          
+          .one-child {
+            padding: 10px;
+          }
           
           @media screen and (max-width: 800px) {
             .one-container {
