@@ -50,13 +50,12 @@ export default {
                 In rhoncus aliquet libero ornare dictum. Etiam in neque molestie, ultrices metus at, lacinia tortor. Mauris feugiat gravida sapien. 
                 Pellentesque non faucibus nisi, non tincidunt diam.
             </p>
-            <ul class="socials">
-                <img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"></img>
-                <li><a href="#" class="fa fa-twitter"><i ></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
+            <div class="socials">
+                <span class="badge-link">ln</span>
+                <span class="badge-link">f</span>
+                <span class="badge-link">g</span>
+                <span class="badge-link">in</span>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>copyright &copy; <a href="#">Made with Peppudraw</a> </p>
@@ -74,6 +73,17 @@ export default {
     width: 100vw;
     padding-top: 40px;
     color: #fff;
+}
+.badge-link{
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-weight: 700;
+  background-color: #fff;
+  color: green;
+  display: block;
+  border-radius: 100%;
+  margin: 0 10px;
 }
 .white {
   color: white;
