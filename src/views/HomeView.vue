@@ -206,7 +206,7 @@ display: block;
           components: `
           <div class="contain">
             <div class="text">
-              <div class="big">Hello, my name is Ali</div>
+              <div class="big">Create a Landing Page in Five Minutes</div>
               <div class="small">Welcome to my website</div>
             </div>
             <div class="buttons">
@@ -306,9 +306,11 @@ display: block;
           styles: `
           .one-container {
             display: flex;
-            width: 100%
+            width: 100%;
+            padding: 20px;
           }
 
+          
           
           @media screen and (max-width: 800px) {
             .one-container {
@@ -365,6 +367,7 @@ display: block;
           .container {
             display: flex;
             width: 100%
+            padding: 20px;
           }
 
           .child {
