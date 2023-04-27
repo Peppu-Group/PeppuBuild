@@ -9,6 +9,7 @@ import 'grapesjs/dist/grapes.min.js'
 import 'grapesjs-preset-webpage/dist/index'
 import plugin from 'grapesjs-preset-webpage'
 import grapesjsblocks from 'grapesjs-blocks-basic'
+import exportbutton from 'grapesjs-plugin-export'
 import grapesnav from 'grapesjs-navbar'
 import { auth } from '../netlify/redirect'
 
@@ -20,12 +21,14 @@ export default {
       container: '#gjs',
       height: '1200px',
       width: '100%',
-      plugins: [plugin, grapesnav],
+      plugins: [plugin, grapesnav, exportbutton, grapesjsblocks],
       storageManager: true,
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
         'grapesjs-blocks-basic': {},
-        'grapesjs-navbar': {}
+        'grapesjs-navbar': {},
+        'exportbutton': {},
+        'grapesjsblocks': {}
       }
     })
 
