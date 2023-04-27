@@ -37,6 +37,7 @@
                 </div>
             </div>
         </hero>
+        <div class="background">
         <div>
         </div>
         <div>
@@ -257,6 +258,7 @@
         </section-one>
         <section-two>
         </section-two>
+    </div>
     </body>
 </template>
 
@@ -397,6 +399,11 @@ body {
   margin-right:0px;
   margin-bottom:5px;
   margin-left:0px;
+}
+.background {
+    background-color: #ffffff;
+    background-image: linear-gradient(to top right, #ffffff, #b5cabb, #ffffff, #f0f0e0, #f0ebd8),
+    linear-gradient(to left, #ffffff, #ffffff);
 }
 .contain{
   height:auto;
