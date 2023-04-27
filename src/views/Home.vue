@@ -555,7 +555,7 @@ body {
 }
 .card-header{
   height:155px;
-  background-image:url("https://via.placeholder.com/350x250/78c5d6/fff");
+  background-image:url("../assets/features.png");
   background-size:cover;
   background-position-x:center;
   background-position-y:center;
