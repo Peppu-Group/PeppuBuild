@@ -239,7 +239,7 @@
                             </p>
                             <div class="socials">
                                 <span class="badge-link">ln</span>
-                                <span class="badge-link">f</span>
+                                <span class="badge-link">t</span>
                                 <span class="badge-link">g</span>
                                 <span class="badge-link">in</span>
                             </div>
