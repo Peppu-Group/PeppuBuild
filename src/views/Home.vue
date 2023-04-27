@@ -321,7 +321,7 @@ body {
   margin: 0;
 }
 .navbar{
-  background-color:rgb(34, 34, 34);
+  background-color:rgb(17, 17, 17);
   color:rgb(221, 221, 221);
   min-height:50px;
   width:100%;
@@ -416,10 +416,14 @@ body {
 }
 .text .big{
   font-size:50px;
+  font-weight:700;
   padding-top:5vw;
   padding-right:5vw;
   padding-bottom:5vw;
   padding-left:5vw;
+  background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(225, 220, 220));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .text .small{
   font-size:25px;
