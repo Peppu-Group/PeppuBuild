@@ -239,7 +239,7 @@ display: block;
 
           .text .big{
             font-size: 50px;
-            padding: 20px
+            padding: 5vw;
           }
 
           .text .small{
@@ -249,6 +249,7 @@ display: block;
 
           .buttons {
             text-align: center;
+            padding: 5vw;
           }
 
           .sub-button {
