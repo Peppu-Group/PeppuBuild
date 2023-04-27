@@ -223,9 +223,9 @@
                                 reflects your brand or personality in minutes.
                             </font>
                         </span>
+                        <button type="button" class="sub-button">Get Started</button>
                     </div>
                     </p>
-                    <button type="button" class="sub-button">Get Started</button>
                 </div>
                 <div>
                     <footer>
