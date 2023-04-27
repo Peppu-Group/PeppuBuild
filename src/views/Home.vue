@@ -13,9 +13,9 @@
                 </div>
                 <div data-gjs="navbar-items" class="navbar-items-c">
                     <nav class="navbar-menu">
-                        <a class="navbar-menu-link">Home</a>
-                        <a class="navbar-menu-link">About</a>
-                        <a class="navbar-menu-link">Contact</a>
+                        <a href='/' class="navbar-menu-link">Home</a>
+                        <a href='/about' class="navbar-menu-link">About</a>
+                        <a href='/contact' class="navbar-menu-link">Contact</a>
                     </nav>
                 </div>
             </div>
@@ -374,6 +374,7 @@ body {
   padding-bottom:10px;
   padding-left:15px;
   font-family:Helvetica, sans-serif;
+  font-size: medium;
 }
 .navbar-burger{
   margin-top:10px;
