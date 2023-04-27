@@ -2,7 +2,7 @@
     <body id="iljx">
         <div class="navbar">
             <div class="navbar-container" data-gjs="navbar">
-                <a href="/" class="navbar-brand"><img src="../assets/logo.png"></a>
+                <a href="/" class="navbar-brand"><img src="../assets/logo.png"/></a>
                 <div class="navbar-burger" id="iksl">
                     <div class="navbar-burger-line">
                     </div>
