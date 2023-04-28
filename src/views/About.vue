@@ -34,10 +34,7 @@
                     life and showcase your skills to the world.</span>
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                <a href="https://getwaitlist.com/waitlist/6658"><button type="button" class="sub-button">Get Started for Free</button></a>
                 </p>
             </div>
         </section-two>
@@ -170,7 +167,7 @@ body {
   width:100%;
 }
 .tech{
-  display:table;
+  display: flex;
   padding-top:10px;
   padding-right:10px;
   padding-bottom:10px;
