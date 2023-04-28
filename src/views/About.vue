@@ -1,5 +1,6 @@
 <template>
     <body id="iljx">
+        <Headers/>
         <section-two>
             <hero>
                 <div class="contain">
@@ -119,11 +120,17 @@
                 </team>
             </div>
     </team>
-</body></template>
+    <Footers/>
+</body>
+</template>
 
 <script>
+import Footers from '../components/Footers.vue'
+import Headers from '../components/Headers.vue'
 export default {
-    name: 'About'
+    name: 'About',
+
+    components: { Footers, Headers },
 }
 </script>
 
