@@ -22,6 +22,54 @@
 </template>
 
 <script>
+export default {
+  name: 'Headers',
+
+  mounted() {
+        var items = document.querySelectorAll('#iksl');
+        for (var i = 0, len = items.length; i < len; i++) {
+            (function () {
+                var n3, t3 = this, e3 = "gjs-collapse", a3 = "max-height", o3 = 0, i3 = function () {
+                    var n4 = document.createElement("void"), t4 = {
+                        transition: "transitionend", OTransition: "oTransitionEnd", MozTransition: "transitionend", WebkitTransition: "webkitTransitionEnd"
+                    };
+                    for (var e4 in t4)
+                        if (void 0 !== n4.style[e4])
+                            return t4[e4];
+                }
+                    (), r2 = function (n4) {
+                        o3 = 1;
+                        var t4 = function (n5) {
+                            var t5 = window.getComputedStyle(n5), e5 = t5.display, o4 = parseInt(t5[a3]);
+                            if ("none" !== e5 && 0 !== o4)
+                                return n5.offsetHeight;
+                            n5.style.height = "auto", n5.style.display = "block", n5.style.position = "absolute", n5.style.visibility = "hidden";
+                            var i4 = n5.offsetHeight;
+                            return n5.style.height = "", n5.style.display = "", n5.style.position = "", n5.style.visibility = "", i4;
+                        }
+                            (n4), e4 = n4.style;
+                        e4.display = "block", e4.transition = "".concat(a3, " 0.25s ease-in-out"), e4.overflowY = "hidden", "" == e4[a3] && (e4[a3] = 0), 0 == parseInt(e4[a3]) ? (e4[a3] = "0", setTimeout(function () {
+                            e4[a3] = t4 + "px";
+                        }
+                            , 10)) : e4[a3] = "0";
+                    };
+                e3 in t3 || t3.addEventListener("click", function (e4) {
+                    if (e4.preventDefault(), !o3) {
+                        var l2 = t3.closest("[data-gjs=navbar]"), c2 = null == l2 ? void 0 : l2.querySelector("[data-gjs=navbar-items]");
+                        c2 && r2(c2), n3 || (null == c2 || c2.addEventListener(i3, function () {
+                            o3 = 0;
+                            var n4 = c2.style;
+                            0 == parseInt(n4[a3]) && (n4.display = "", n4[a3] = "");
+                        }
+                        ), n3 = 1);
+                    }
+                }
+                ), t3[e3] = 1;
+            }
+                .bind(items[i]))();
+        }
+  },
+}
 </script>
 
 <style>
