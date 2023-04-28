@@ -112,6 +112,9 @@ export default {
   float:right;
   cursor:pointer;
 }
+.nav-img {
+    width: 70%;
+}
 .navbar-burger-line{
   padding-top:1px;
   padding-right:1px;

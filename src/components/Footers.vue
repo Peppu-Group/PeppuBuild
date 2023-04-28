@@ -127,8 +127,6 @@ footer{
   background-position-x:initial;
   background-position-y:initial;
   background-size:initial;
-  background-repeat-x:initial;
-  background-repeat-y:initial;
   background-attachment:initial;
   background-origin:initial;
   background-clip:initial;
@@ -143,8 +141,6 @@ footer{
   background-position-x:initial;
   background-position-y:initial;
   background-size:initial;
-  background-repeat-x:initial;
-  background-repeat-y:initial;
   background-attachment:initial;
   background-origin:initial;
   background-clip:initial;

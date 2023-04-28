@@ -239,9 +239,6 @@ export default {
 body {
   margin: 0;
 }
-.nav-img {
-    width: 10vw;
-}
 .background {
     background-color: #ffffff;
     background-image: linear-gradient(to top right, #ffffff, #b5cabb, #ffffff, #f0f0e0, #f0ebd8),
