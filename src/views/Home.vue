@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="sub-button">Get Started</button>
+                    <a href="https://getwaitlist.com/waitlist/6658"><button type="button" class="sub-button">Get Started</button></a>
                     <button type="button" class="sub-button">Learn More</button>
                 </div>
             </div>
@@ -223,7 +223,7 @@
                                 reflects your brand or personality in minutes.
                             </font>
                         </span>
-                        <button type="button" class="sub-button">Get Started</button>
+                        <a href="https://getwaitlist.com/waitlist/6658"><button type="button" class="sub-button">Get Started</button></a>
                     </div>
                     </p>
                 </div>
