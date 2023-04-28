@@ -246,7 +246,7 @@
                         </div>
                         <div class="footer-bottom">
                             <p id="i3p4ne">copyright ©
-                                <a href="#">Made with Peppudraw</a>
+                                <a href="/">Made with Peppudraw</a>
                             </p>
                         </div>
                     </footer>
