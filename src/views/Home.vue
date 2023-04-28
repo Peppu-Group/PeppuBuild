@@ -2,7 +2,7 @@
     <body id="iljx">
         <div class="navbar">
             <div class="navbar-container" data-gjs="navbar">
-                <a href="/" class="navbar-brand"><img src="../assets/logo.png"/></a>
+                <a href="/" class="navbar-brand"><img src="../assets/logo.png" class="nav-img"/></a>
                 <div class="navbar-burger" id="iksl">
                     <div class="navbar-burger-line">
                     </div>
@@ -349,6 +349,9 @@ body {
   padding-bottom:10px;
   display:block;
   float:left;
+}
+.nav-img {
+    width: 10vw;
 }
 .navbar-menu{
   padding-top:10px;
