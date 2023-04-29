@@ -625,11 +625,16 @@ display: block;
         defaults: {
           tagName: 'form',
           components: `
+            <div class='form-container'>
+              <div class='form-text'>
+                <p>peeww</p>
+              </div>
               <div class="foot-form-cont">
                 <input name="name" class="sub-input" placeholder="Name" />
                 <input name="email" class="sub-input" placeholder="Email"/>
                 <button class="sub-btn" type="button">Submit</button>
               </div>
+            </div>
           `,
           styles: `
           .input,
@@ -655,6 +660,11 @@ display: block;
           padding: 20px;
           font-size: 1em;
           cursor: pointer;
+        }
+        .form-container {
+          display: flex;
+          width: 100%
+          padding: 20px;
         }
           `,
         }
