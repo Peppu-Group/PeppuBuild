@@ -615,6 +615,62 @@ display: block;
       category: 'Blocks'
     })
 
+    // create section cards
+    editor.Components.addType('form', {
+      // Make the editor understand when to bind `my-input-type`
+
+      // Model definition
+      model: {
+        // Default properties
+        defaults: {
+          tagName: 'form',
+          components: `
+              <div class="foot-form-cont">
+                <input name="name" class="sub-input" placeholder="Name" />
+                <input name="email" class="sub-input" placeholder="Email"/>
+                <button class="sub-btn" type="button">Submit</button>
+              </div>
+          `,
+          styles: `
+          .input,
+        .textarea,
+        .select,
+        .sub-input {
+          width: 100%;
+          margin: 15px;
+          padding: 20px;
+          border-radius: 2px;
+          background-color: #554c57;
+          border: none;
+          color: black;
+        }
+        .button,
+        .sub-btn{
+          width: 100%;
+          margin: 15px 0;
+          background-color: #785580;
+          border: none;
+          color:#fff;
+          border-radius: 2px;
+          padding: 20px;
+          font-size: 1em;
+          cursor: pointer;
+        }
+          `,
+        }
+      }
+    })
+
+   // A block for the custom component
+   bm.add('form', {
+      label: 'form',
+      content: { type: 'form' },
+      attributes: {
+        class: 'fa fa-user'
+      },
+      category: 'Blocks'
+    })
+
     bm.add('social-sign-in-butttons-section', {
       label: 'Button',
       /*
