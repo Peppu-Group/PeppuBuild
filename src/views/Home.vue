@@ -14,7 +14,7 @@
                 </div>
                 <div class="buttons">
                     <a href="https://getwaitlist.com/waitlist/6658"><button type="button" class="sub-button">Get Started</button></a>
-                    <button type="button" class="sub-button">Learn More</button>
+                    <a href="/about"><button type="button" class="sub-button">Learn More</button></a>
                 </div>
             </div>
         </hero>

@@ -2,6 +2,7 @@
     <body id="iljx">
         <Headers />
         <div class="background">
+            <h1 class="top">Work With Ready-Made Templates</h1>
             <div>
                 <img src="../assets/opening.gif" class="opening" />
             </div>
@@ -123,6 +124,16 @@ body {
     margin: 0;
 }
 
+.top {
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(225, 220, 220));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .background {
     background-color: #ffffff;
     background-image: linear-gradient(to top right, #ffffff, #b5cabb, #ffffff, #f0f0e0, #f0ebd8),
@@ -146,12 +157,11 @@ body {
 }
 
 .opening {
-    width: 50vw;
-    height: 50vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    padding-top: 20px;
 }
 
 .img {
