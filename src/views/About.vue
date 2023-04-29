@@ -30,8 +30,16 @@
                     </p>
                 </div>
             </section-two>
-            <div id="ieem1f" class="tech">
-                <img id="imemdl" src='' />
+            <div class="tech-text">
+                <h1>Build with technologies you love</h1>
+                <div id="ieem1f" class="tech">
+                    <img id="imemdl" src='../assets/logos/vue.png' class="tech-img" />
+                    <img id="imemdl" src='../assets/logos/react.png' class="tech-img" />
+                    <img id="imemdl" src='../assets/logos/angular.png' class="tech-img" />
+                    <img id="imemdl" src='../assets/logos/svelte.png' class="tech-img" />
+                    <img id="imemdl" src='../assets/logos/Gatsby_Monogram.png' class="tech-img" />
+                    <img id="imemdl" src='../assets/logos/next.png' class="next-img" />
+                </div>
             </div>
             <h1 id="iklm-2" draggable="false" class="center gjs-selected">
                 <span id="iklm-2-2" draggable="false" class="center gjs-selected">What we Offer?</span>
@@ -130,8 +138,8 @@ body {
     font-size: 40px;
     text-align: center;
     background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(12, 13, 5));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .background {
@@ -186,10 +194,27 @@ body {
 .tech {
     display: flex;
     padding-top: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     width: 100%;
+    height: 70px;
+    justify-content: center;
+}
+
+.tech-img {
+    padding: 10px;
+}
+
+.next-img {
+    padding: 10px;
+    width: 80px;
+}
+
+.tech-text {
+    text-align: center;
+    padding: 20px;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
 }
 
 .gjs-cell {
@@ -354,4 +379,5 @@ body {
         width: 100%;
         display: block;
     }
-}</style>
+}
+</style>
