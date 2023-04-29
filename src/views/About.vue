@@ -129,7 +129,7 @@ body {
     padding: 20px;
     font-size: 40px;
     text-align: center;
-    background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(225, 220, 220));
+    background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(12, 13, 5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
