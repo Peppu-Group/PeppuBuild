@@ -42,7 +42,8 @@ export default {
         authenticate() {
             netlifyIdentity.open('login')
             netlifyIdentity.on('login', u => {
-                document.location.href='google.com'
+                let key = 'userinfoo'
+                localStorage.setItem(key, u.email)
             })
         }
     }
