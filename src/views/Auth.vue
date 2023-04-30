@@ -28,13 +28,8 @@
   
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
+import authh from '../netlify/authh'
 
-document.querySelector('#login').addEventListener('click', function () {
-                netlifyIdentity.open()
-            })
-            netlifyIdentity.on('login', function (user) {
-                console.log('hannydevelop')
-            })
 export default {
     name: 'Auth',
 
