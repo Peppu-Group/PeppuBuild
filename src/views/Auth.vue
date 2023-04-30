@@ -34,7 +34,6 @@ export default {
 
     mounted() {
         netlifyIdentity.init({
-            container: '#netlify-modal',
             logo: false // you can try false and see what happens
         });
     },
