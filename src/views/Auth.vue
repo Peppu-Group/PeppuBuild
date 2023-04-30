@@ -37,6 +37,7 @@ export default {
             APIUrl: "",
             logo: false // you can try false and see what happens
         });
+        netlifyIdentity.on('login', user => console.log('login', user));
     },
     methods: {
         authenticate() {
