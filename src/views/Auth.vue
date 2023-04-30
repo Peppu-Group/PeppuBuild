@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="start">
-                <a href="#" id='login' @click="authenticate"><img src="../assets/netlify-start.png" class="img-start" /></a>
+                <a href="#" id='login' @click="triggerNetlifyIdentityAction('login')"><img src="../assets/netlify-start.png" class="img-start" /></a>
             </div>
             <div class="logo-img">
                 <img id="iix4i" src="../assets/intro.png" />
@@ -38,14 +38,13 @@ export default {
         });
     },
     methods: {
-        authenticate() {
-            document.querySelector('#login').addEventListener('click', function () {
-                netlifyIdentity.open()
-            })
-            netlifyIdentity.on('login', function (user) {
-                console.log('hannydevelop')
-            })
-        }
+        triggerNetlifyIdentityAction(action) {
+      if (action == "login" || action == "signup") {
+        netlifyIdentity.open(action);
+        netlifyIdentity.on(action, user => {
+           console.log(user); 
+        })
+      }}
     }
 }
 
