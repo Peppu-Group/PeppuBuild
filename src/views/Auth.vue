@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         authenticate() {
-            netlifyIdentity.open(action)
+            netlifyIdentity.open('login')
             netlifyIdentity.on('login', u => {
                 document.location.href='google.com'
             })
