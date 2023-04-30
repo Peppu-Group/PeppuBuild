@@ -38,14 +38,14 @@ export default {
         });
     },
     methods: {
-        authenticate(event) {
-            netlifyIdentity.open('login')
-            if (event) {
-      alert(event.target.tagName)
-    }
+        authenticate() {
+            netlifyIdentity.on('login', function (user) {
+                console.log('hannydevelop')
+            })
         }
     }
 }
+
 </script>
 
 <style>
