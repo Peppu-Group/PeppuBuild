@@ -20,7 +20,7 @@
                 <a href="#" id='login' @click="triggerNetlifyIdentityAction('login')"><img src="../assets/netlify-start.png" class="img-start" /></a>
             </div>
             <div class="logo-img">
-                <img id="iix4i" src="../assets/intro.png" />
+                <button class="btn btn-outline-dark w-100" id="login">Log In / Register</button>
             </div>
         </div>
     </body>
@@ -29,6 +29,12 @@
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
 
+document.querySelector('#login').addEventListener('click', function () {
+                netlifyIdentity.open()
+            })
+            netlifyIdentity.on('login', function (user) {
+                console.log('hannydevelop')
+            })
 export default {
     name: 'Auth',
 
@@ -37,15 +43,7 @@ export default {
             logo: false // you can try false and see what happens
         });
     },
-    methods: {
-        triggerNetlifyIdentityAction(action) {
-      if (action == "login" || action == "signup") {
-        netlifyIdentity.open(action);
-        netlifyIdentity.on(action, user => {
-           console.log(user); 
-        })
-      }}
-    }
+   
 }
 
 </script>
