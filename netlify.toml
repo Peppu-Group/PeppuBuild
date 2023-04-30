@@ -6,4 +6,4 @@
 [[redirects]]
   from = "/auth"
   to = "/about"
-  status = 301
+  status = 200
