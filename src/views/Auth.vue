@@ -38,12 +38,11 @@ export default {
         });
     },
     methods: {
-        authenticate() {
+        authenticate(event) {
             netlifyIdentity.open('login')
-            window.netlifyIdentity.on("login", user => {
-                console.log(user)
-                document.location.href = 'https://peppubuild.netlify.app/about'
-            })
+            if (event) {
+      alert(event.target.tagName)
+    }
         }
     }
 }
