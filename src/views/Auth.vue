@@ -40,11 +40,11 @@ export default {
     },
     methods: {
         authenticate() {
-            document.location.href = 'https://peppubuild.netlify.app/about'
             netlifyIdentity.open('login')
+            netlifyIdentity.close();
             netlifyIdentity.on('login', user => {
                 console.log(user)
-                
+                document.location.href = 'https://peppubuild.netlify.app/about'
             })
         }
     }
