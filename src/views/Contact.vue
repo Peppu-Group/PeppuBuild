@@ -6,7 +6,7 @@
                 <h1 class="heading">Talk to Us
                 </h1>
                 <span id="ilg2">Do you have any questions about Peppubuild? You can watch the video of how it works below.
-                    Schedule a demo to talk about how Peppubuild can work for you and your team.</span>
+                    Schedule a demo to talk about how Peppubuild can work for you and your team.</span>
             </section>
             <form>
                 <div class="form-container">
@@ -46,9 +46,23 @@ body {
 }
 
 .heading {
-    font-size: 50px;
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
     text-align: center;
-    font-family: Trebuchet MS, Helvetica, sans-serif;
+    background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(12, 13, 5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bdg-sect {
+    text-align: center;
+    padding: 10px;
+}
+
+.heading-text {
+    text-align: center;
+    padding: 20px; 
 }
 
 #ilg2 {
@@ -71,7 +85,7 @@ body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
-    background-color: rgb(85, 76, 87);
+    background-color: rgb(235, 232, 236);
     border-top-width: initial;
     border-right-width: initial;
     border-bottom-width: initial;
@@ -106,7 +120,7 @@ body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
-    background-color: rgb(120, 85, 128);
+    background-color: rgb(28, 61, 21);
     border-top-width: initial;
     border-right-width: initial;
     border-bottom-width: initial;
