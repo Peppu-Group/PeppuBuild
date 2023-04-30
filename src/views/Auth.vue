@@ -17,10 +17,10 @@
                 </div>
             </div>
             <div class="start">
-                <a href="#" id='login' @click="triggerNetlifyIdentityAction('login')"><img src="../assets/netlify-start.png" class="img-start" /></a>
+                <div id="my-signin2"></div>
             </div>
             <div class="logo-img">
-                <button class="btn btn-outline-dark w-100" id="login">Log In / Register</button>
+                <img id="iix4i" src="../assets/intro.png" />
             </div>
         </div>
     </body>
@@ -36,15 +36,35 @@ export default {
         netlifyIdentity.init({
             logo: false // you can try false and see what happens
         });
+
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+        return renderButton()
     },
     methods: {
         triggerNetlifyIdentityAction(action) {
-      if (action == "login" || action == "signup") {
-        netlifyIdentity.open(action);
-        netlifyIdentity.on(action, user => {
-           console.log(user); 
-        })
-      }}
+            if (action == "login" || action == "signup") {
+                netlifyIdentity.open(action);
+                netlifyIdentity.on(action, user => {
+                    console.log(user);
+                })
+            }
+        }
     }
 }
 
