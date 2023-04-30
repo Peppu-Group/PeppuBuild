@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="start">
-                <a href="#" @click="authenticate"><img src="../assets/netlify-start.png" class="img-start" /></a>
+                <a href="#" id='login' @click="authenticate"><img src="../assets/netlify-start.png" class="img-start" /></a>
             </div>
             <div class="logo-img">
                 <img id="iix4i" src="../assets/intro.png" />
