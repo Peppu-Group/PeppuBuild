@@ -40,11 +40,10 @@ export default {
     },
     methods: {
         authenticate() {
-            netlifyIdentity.open('login');
-            netlifyIdentity.on("login", user => {
-                console.log(user)
-            });
-            console.log('hanny');
+            netlifyIdentity.open(action)
+            netlifyIdentity.on('login', u => {
+                document.location.href='google.com'
+            })
         }
     }
 }
