@@ -42,8 +42,7 @@ export default {
         authenticate() {
             netlifyIdentity.open('login')
             netlifyIdentity.on('login', u => {
-                let key = 'userinfoo'
-                localStorage.setItem(key, u.email)
+                console.log('hannydevelop')
             })
         }
     }
