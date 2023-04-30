@@ -28,7 +28,6 @@
   
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
-import authh from '../netlify/authh'
 
 export default {
     name: 'Auth',
@@ -37,15 +36,16 @@ export default {
         netlifyIdentity.init({
             logo: false // you can try false and see what happens
         });
-
-        document.querySelector('#login').addEventListener('click', function () {
-    netlifyIdentity.open()
-})
-netlifyIdentity.on('login', function (user) {
-    console.log('hannydevelop')
-})
     },
-   
+    methods: {
+        triggerNetlifyIdentityAction(action) {
+      if (action == "login" || action == "signup") {
+        netlifyIdentity.open(action);
+        netlifyIdentity.on(action, user => {
+           console.log(user); 
+        })
+      }}
+    }
 }
 
 </script>
