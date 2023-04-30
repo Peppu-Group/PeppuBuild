@@ -224,11 +224,16 @@
 <script>
 import Footers from '../components/Footers.vue'
 import Headers from '../components/Headers.vue'
+import netlifyIdentity from 'netlify-identity-widget';
 
 export default {
     name: 'Home',
 
     components: { Footers, Headers },
+
+    mounted() {
+        netlifyIdentity.on('login', user => console.log('login', user));
+    }
 }
 </script>
 
