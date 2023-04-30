@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         authenticate() {
-            netlifyIdentity.open();
+            netlifyIdentity.open('login');
             netlifyIdentity.on('login', function (user) {
                 console.log('hannydevelop')
             })
