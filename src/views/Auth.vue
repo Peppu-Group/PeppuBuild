@@ -38,6 +38,13 @@ export default {
             logo: false // you can try false and see what happens
         });
 
+        window.gapi.load('client:auth2', () => {
+            window.gapi.client.init({
+                clientId: '913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com',
+                plugin_name: "chat"
+            })
+        })
+
         function onSuccess(googleUser) {
             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
         }
