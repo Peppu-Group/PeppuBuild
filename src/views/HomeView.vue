@@ -22,7 +22,7 @@ export default {
       height: '1200px',
       width: '100%',
       plugins: [plugin, grapesnav, exportbutton, grapesjsblocks],
-      storageManager: true,
+      storageManager: false,
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
         'grapesjs-blocks-basic': {},
@@ -626,7 +626,7 @@ display: block;
           tagName: 'form',
           components: `
             <div class='form-container'>
-              <div class='form-text'>
+              <div class=' '>
                 <p>peeww</p>
               </div>
               <div class="foot-form-cont">
@@ -641,7 +641,7 @@ display: block;
         .textarea,
         .select,
         .sub-input {
-          width: 100%;
+          width: 95%;
           margin: 15px;
           padding: 20px;
           border-radius: 2px;
@@ -651,20 +651,27 @@ display: block;
         }
         .button,
         .sub-btn{
-          width: 100%;
-          margin: 15px 0;
+          width: 95%;
+          margin: 15px;
+          padding: 20px;
+          border-radius: 2px;
           background-color: #785580;
           border: none;
-          color:#fff;
-          border-radius: 2px;
-          padding: 20px;
-          font-size: 1em;
-          cursor: pointer;
+          color: black;
         }
         .form-container {
           display: flex;
           width: 100%
-          padding: 20px;
+          gap: 50px;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (max-width: 600px){
+          .form-container{
+            display: block;
+            width: 100%;
+            padding: 20px;
+          }
         }
           `,
         }
