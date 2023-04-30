@@ -35,12 +35,16 @@ export default {
     mounted() {
         netlifyIdentity.init({
             APIUrl: "",
-            logo: true // you can try false and see what happens
+            logo: false // you can try false and see what happens
         });
     },
     methods: {
         authenticate() {
             netlifyIdentity.open('login');
+            netlifyIdentity.on("login", user => {
+                console.log(user)
+            });
+            console.log('hanny');
         }
     }
 }
@@ -86,7 +90,8 @@ body {
     height: 100%;
     text-align: center;
     padding: 20px;
-    border-style: solid
+    border-style: solid;
+    border-color: #2dc046;
 }
 
 #i9x1 {
