@@ -28,6 +28,7 @@
   
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
+import { gapi } from "gapi-script";
 
 export default {
     name: 'Auth',
