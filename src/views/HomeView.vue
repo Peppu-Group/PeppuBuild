@@ -22,7 +22,7 @@ export default {
       height: '1200px',
       width: '100%',
       plugins: [plugin, grapesnav, exportbutton, grapesjsblocks],
-      storageManager: false,
+      storageManager: true,
       pluginsOpts: {
         'grapesjs-preset-webpage': {},
         'grapesjs-blocks-basic': {},

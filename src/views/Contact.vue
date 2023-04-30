@@ -1,6 +1,29 @@
 <template>
-<Headers/>
-<Footers/>
+    <div class="background">
+    <body id="iljx">
+        <Headers />
+            <section class="bdg-sect">
+                <h1 class="heading">Talk to Us
+                </h1>
+                <span id="ilg2">Do you have any questions about Peppubuild? You can watch the video of how it works below.
+                    Schedule a demo to talk about how Peppubuild can work for you and your team.</span>
+            </section>
+            <form>
+                <div class="form-container">
+                    <div>
+                        <iframe class="img" src="https://www.youtube.com/embed/9RpRIntZ-fc">
+                        </iframe>
+                    </div>
+                    <div class="foot-form-cont">
+                        <input name="name" placeholder="Name" class="sub-input" />
+                        <input name="email" placeholder="Email" class="sub-input" />
+                        <button type="button" class="sub-btn">Submit</button>
+                    </div>
+                </div>
+            </form>
+        <Footers />
+    </body>
+</div>
 </template>
   
 <script>
@@ -9,6 +32,115 @@ import Headers from '../components/Headers.vue'
 
 export default {
     name: 'Contact',
-    components: {Headers, Footers}
+    components: { Headers, Footers }
 }
 </script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.heading {
+    font-size: 50px;
+    text-align: center;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+#ilg2 {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.sub-input {
+    width: 95%;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: rgb(85, 76, 87);
+    border-top-width: initial;
+    border-right-width: initial;
+    border-bottom-width: initial;
+    border-left-width: initial;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    color: black;
+}
+
+.sub-btn {
+    width: 95%;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: rgb(120, 85, 128);
+    border-top-width: initial;
+    border-right-width: initial;
+    border-bottom-width: initial;
+    border-left-width: initial;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    color: black;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        display: block;
+        width: 100%;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}
+</style>
