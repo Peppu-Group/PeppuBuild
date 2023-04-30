@@ -34,7 +34,7 @@ export default {
 
     mounted() {
         netlifyIdentity.init({
-            APIUrl: "",
+            container: '#netlify-modal',
             logo: false // you can try false and see what happens
         });
     },
