@@ -37,6 +37,13 @@ export default {
         netlifyIdentity.init({
             logo: false // you can try false and see what happens
         });
+
+        document.querySelector('#login').addEventListener('click', function () {
+    netlifyIdentity.open()
+})
+netlifyIdentity.on('login', function (user) {
+    console.log('hannydevelop')
+})
     },
    
 }
