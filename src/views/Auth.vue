@@ -17,7 +17,9 @@
                 </div>
             </div>
             <div class="start">
-                <div id="g_id_onload" data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com" data-callback="handleCredentialResponse">
+                <div id="g_id_onload"
+                    data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com"
+                    data-callback="handleCredentialResponse">
                 </div>
                 <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
             </div>
@@ -35,8 +37,17 @@ export default {
     name: 'Auth',
 
     mounted() {
+        function decodeJwtResponse(token) {
+            let base64Url = token.split('.')[1]
+            let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(jsonPayload)
+        }
         window.handleCredentialResponse = (response) => {
-            console.log(response)
+            responsePayload = decodeJwtResponse(response.credential);
+            console.log('Family Name: ' + responsePayload.family_name);
         }
     },
     methods: {
