@@ -57,6 +57,7 @@ export default {
         console.log("Image URL: " + responsePayload.picture);
         console.log("Email: " + responsePayload.email);
     }
+    return handleCredentialResponse();
     },
     methods: {
     }
