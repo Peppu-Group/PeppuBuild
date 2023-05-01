@@ -20,6 +20,7 @@
                 <div id="g_id_onload" data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com" data-callback="handleCredentialResponse">
                 </div>
                 <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
+                <div class="g_id_signout" id="signout_button"><button>Sign Out</button></div>
             </div>
             <div class="logo-img">
                 <img id="iix4i" src="../assets/intro.png" />
@@ -35,6 +36,10 @@ export default {
     name: 'Auth',
 
     mounted() {
+        const button = document.getElementById('signout_button');
+    button.onclick = () => {
+      google.accounts.id.disableAutoSelect();
+    }
     },
     methods: {
     }
