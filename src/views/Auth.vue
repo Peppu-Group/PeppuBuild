@@ -19,7 +19,7 @@
             <div class="start">
                 <div id="g_id_onload" data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com" data-callback="handleCredentialResponse">
                 </div>
-                <div class="g_id_signin" data-type="standard"></div>
+                <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
             </div>
             <div class="logo-img">
                 <img id="iix4i" src="../assets/intro.png" />
@@ -30,44 +30,13 @@
   
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
-import { gapi } from "gapi-script";
 
 export default {
     name: 'Auth',
 
     mounted() {
-        netlifyIdentity.init({
-            logo: false // you can try false and see what happens
-        });
-
-        function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        }
-        function onFailure(error) {
-            console.log(error);
-        }
-        function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': true,
-                'theme': 'dark',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-        }
-        return renderButton()
     },
     methods: {
-        triggerNetlifyIdentityAction(action) {
-            if (action == "login" || action == "signup") {
-                netlifyIdentity.open(action);
-                netlifyIdentity.on(action, user => {
-                    console.log(user);
-                })
-            }
-        }
     }
 }
 
