@@ -17,7 +17,9 @@
                 </div>
             </div>
             <div class="start">
-                <div id="my-signin2"></div>
+                <div id="g_id_onload" data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com" data-callback="handleCredentialResponse">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
             </div>
             <div class="logo-img">
                 <img id="iix4i" src="../assets/intro.png" />
