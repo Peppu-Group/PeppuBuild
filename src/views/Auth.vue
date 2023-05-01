@@ -46,7 +46,7 @@ export default {
             return JSON.parse(jsonPayload)
         }
         window.handleCredentialResponse = (response) => {
-            responsePayload = decodeJwtResponse(response.credential);
+            let responsePayload = decodeJwtResponse(response.credential);
             console.log('Family Name: ' + responsePayload.family_name);
         }
     },
