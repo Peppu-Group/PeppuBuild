@@ -48,6 +48,9 @@ export default {
         window.handleCredentialResponse = (response) => {
             let responsePayload = decodeJwtResponse(response.credential);
             console.log('Family Name: ' + responsePayload.family_name);
+            this.$router.push({
+                name: "home"
+            });
         }
     },
     methods: {
