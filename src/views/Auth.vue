@@ -46,10 +46,12 @@ export default {
             return JSON.parse(jsonPayload)
         }
         window.handleCredentialResponse = (response) => {
+            let key = 'gtoken'
+            localStorage.setItem(key, response.credential)
             let responsePayload = decodeJwtResponse(response.credential);
             console.log('Family Name: ' + responsePayload.family_name);
             this.$router.push({
-                name: "home"
+                name: "dashboard"
             });
         }
     },
