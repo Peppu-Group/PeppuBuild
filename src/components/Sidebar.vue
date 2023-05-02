@@ -45,11 +45,11 @@
 
 <script>
 let userinfo = JSON.parse(localStorage.getItem('user'));
-let img = userinfo.picture;
 
 export default {
     name: 'Sidebar',
     data() {
+    let img = userinfo.picture;
     return {
       name: userinfo.given_name,
       imageLink: img,
