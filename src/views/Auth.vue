@@ -71,6 +71,7 @@ body {
 .logo-img {
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
 .gjs-row {
