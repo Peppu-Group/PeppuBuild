@@ -1,9 +1,11 @@
 <template>
 <body id="if7l">
-  <sidebar>
     <aside class="wrapper">
       <!--Top menu -->
       <div class="sidebar">
+        <div class="p-top">
+            <a href="https://peppubuild.netlify.app"><img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png" alt="profile_picture"/></a> 
+        </div>
         <div class="profile">
           <img src="https://i.ibb.co/HnCWj2v/team3.jpg" alt="profile_picture"/>
           <h3>Anamika Roy
@@ -45,7 +47,6 @@
         </ul>
       </div>
     </aside>
-  </sidebar>
 </body>
 </template>
 
@@ -81,29 +82,16 @@ body {
   box-sizing:border-box;
   font-family:"Open Sans", sans-serif;
 }
-body{
-  background-image:initial;
-  background-position-x:initial;
-  background-position-y:initial;
-  background-size:initial;
-  background-repeat-x:initial;
-  background-repeat-y:initial;
-  background-attachment:initial;
-  background-origin:initial;
-  background-clip:initial;
-  background-color:rgb(245, 246, 250);
-}
+
 .wrapper .sidebar{
   background-image:initial;
   background-position-x:initial;
   background-position-y:initial;
   background-size:initial;
-  background-repeat-x:initial;
-  background-repeat-y:initial;
   background-attachment:initial;
   background-origin:initial;
   background-clip:initial;
-  background-color:rgb(5, 68, 104);
+  background-color:#E8EAED;
   position:fixed;
   top:0px;
   left:0px;
@@ -136,11 +124,25 @@ body{
   margin-left:auto;
 }
 .wrapper .sidebar .profile h3{
-  color:rgb(255, 255, 255);
+  color:black;
   margin-top:10px;
   margin-right:0px;
   margin-bottom:5px;
   margin-left:0px;
+}
+
+.wrapper .sidebar .p-top {
+  display:block;
+  width:100px;
+  height:100px;
+  border-top-left-radius:50%;
+  border-top-right-radius:50%;
+  border-bottom-right-radius:50%;
+  border-bottom-left-radius:50%;
+  margin-top:0px;
+  margin-right:auto;
+  margin-bottom:0px;
+  margin-left:auto;
 }
 
 .wrapper .sidebar ul li a{
@@ -151,8 +153,8 @@ body{
   padding-left:30px;
   border-bottom-width:1px;
   border-bottom-style:solid;
-  border-bottom-color:rgb(16, 85, 141);
-  color:rgb(241, 237, 237);
+  border-bottom-color:#E8EAED;
+  color:black;
   font-size:16px;
   position:relative;
 }
@@ -167,18 +169,16 @@ body{
   background-position-x:initial;
   background-position-y:initial;
   background-size:initial;
-  background-repeat-x:initial;
-  background-repeat-y:initial;
   background-attachment:initial;
   background-origin:initial;
   background-clip:initial;
   background-color:white;
   border-right-width:2px;
   border-right-style:solid;
-  border-right-color:rgb(5, 68, 104);
+  border-right-color:#E8EAED;
 }
 .wrapper .sidebar ul li a:hover .icon, .wrapper .sidebar ul li a.active .icon{
-  color:rgb(12, 125, 177);
+  color:#E8EAED;
 }
 .wrapper .sidebar ul li a:hover::before, .wrapper .sidebar ul li a.active::before{
   display:block;

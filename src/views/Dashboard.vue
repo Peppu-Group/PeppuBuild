@@ -1,12 +1,12 @@
 <template>
-<Headers/>
+<Sidebar/>
 </template>
 
 <script>
-import Headers from '../components/Headers.vue'
+import Sidebar from '../components/Sidebar.vue';
 
 export default {
   name: 'Dashboard',
-  components: { Headers },
+  components: { Sidebar },
 }
 </script>
