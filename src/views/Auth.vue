@@ -46,10 +46,9 @@ export default {
             return JSON.parse(jsonPayload)
         }
         window.handleCredentialResponse = (response) => {
-            let key = 'gtoken'
-            localStorage.setItem(key, response.credential)
+            localStorage.setItem("gtoken", response.credential)
             let responsePayload = decodeJwtResponse(response.credential);
-            console.log('Family Name: ' + responsePayload.family_name);
+            localStorage.setItem("user", JSON.stringify(responsePayload))
             document.location.href = '/dashboard'
         }
     },

@@ -8,8 +8,8 @@
                             alt="profile_picture" /></a>
                 </div>
                 <div class="profile">
-                    <img src="https://i.ibb.co/HnCWj2v/team3.jpg" alt="profile_picture" />
-                    <h3>Anamika Roy
+                    <img :src="imageLink" alt="profile_picture" />
+                    <h3>{{name}}
                     </h3>
                 </div>
                 <ul>
@@ -44,8 +44,17 @@
 </template>
 
 <script>
+let userinfo = JSON.parse(localStorage.getItem('user'));
+let img = userinfo.picture;
+
 export default {
     name: 'Sidebar',
+    data() {
+    return {
+      name: userinfo.given_name,
+      imageLink: img,
+    };
+  },
 }
 </script>
 

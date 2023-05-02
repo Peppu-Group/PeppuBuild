@@ -8,7 +8,7 @@
                 <div class="one-container">
                     <div class="one-child">
                         <p class="i0sf">
-                            Hi Anamika, welcome back!
+                            Hi {{name}}, welcome back!
                         </p>
                         <p class="i0sg">
                             We hope you're having a great day and are 
@@ -25,10 +25,16 @@
 
 <script>
 import Sidebar from '../components/Sidebar.vue';
+let userinfo = JSON.parse(localStorage.getItem('user'));
 
 export default {
     name: 'Dashboard',
     components: { Sidebar },
+    data() {
+    return {
+      name: userinfo.given_name,
+    };
+  },
 }
 </script>
 
