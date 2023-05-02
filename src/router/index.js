@@ -6,6 +6,7 @@ import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Auth from '../views/Auth.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Logout from '@/components/Logout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,11 @@ const router = createRouter({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: Logout
     }
     /* 
     {
