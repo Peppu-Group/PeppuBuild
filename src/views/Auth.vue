@@ -50,12 +50,11 @@ export default {
             localStorage.setItem(key, response.credential)
             let responsePayload = decodeJwtResponse(response.credential);
             console.log('Family Name: ' + responsePayload.family_name);
-            this.$router.push({
-                name: "dashboard"
-            });
+            document.location.href = '/dashboard'
         }
     },
     methods: {
+        
     }
 }
 
