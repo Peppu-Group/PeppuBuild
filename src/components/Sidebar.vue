@@ -13,11 +13,11 @@
         </div>
         <ul>
           <li>
-            <a href="#" class="active"><span class="icon"><i class="fas fa-home">
+            <a href="/dashboard" class="active"><span class="icon"><i class="fas fa-home">
               </i></span><span class="item">Dashboard</span></a>
           </li>
           <li>
-            <a href="#"><span class="icon"><i class="fas fa-desktop">
+            <a href="/workspace"><span class="icon"><i class="fas fa-desktop">
               </i></span><span class="item">Workspace</span></a>
           </li>
           <li>
