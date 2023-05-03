@@ -8,9 +8,10 @@
             <div class="logo-img">
                 <img id="i2gy" src="../assets/logo.png" />
             </div>
-            <div id="i9x1">Hey!! We use Netlify for hosting and authentication. We'll introduce Google and other
+            <div id="i9x1" v-for="user in users" :key="user.id">Hey!! We use Netlify for hosting and authentication. We'll introduce Google
+                and other
                 authentication
-                means later.
+                means later {{ user.email }}.
             </div>
             <div class="gjs-row" id="i27o">
                 <div class="gjs-cell" id="ioc3">
@@ -32,9 +33,22 @@
   
 <script>
 import netlifyIdentity from 'netlify-identity-widget';
+import { useCollection } from 'vuefire'
+import { usersRef } from '../firebaseInit';
+const users = useCollection(usersRef);
 
 export default {
     name: 'Auth',
+
+    data() {
+        return {
+            users: users
+        }
+    },
+
+    firestore: {
+        users: users
+    },
 
     mounted() {
         function decodeJwtResponse(token) {
@@ -53,7 +67,7 @@ export default {
         }
     },
     methods: {
-        
+
     }
 }
 

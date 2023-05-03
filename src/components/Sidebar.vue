@@ -140,7 +140,7 @@ body {
     padding-right: 1px;
     padding-bottom: 1px;
     padding-left: 1px;
-    background-color: red;
+    background-color: black;
     margin-top: 5px;
     margin-right: 0px;
     margin-bottom: 5px;
