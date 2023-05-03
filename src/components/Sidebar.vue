@@ -1,15 +1,23 @@
 <template>
     <body id="if7l">
         <aside class="wrapper">
+            <div class="sidebar-burger" @click="showSide">
+                <div class="sidebar-burger-line">
+                </div>
+                <div class="sidebar-burger-line">
+                </div>
+                <div class="sidebar-burger-line">
+                </div>
+            </div>
             <!--Top menu -->
-            <div class="sidebar">
+            <div class="sidebar" id="dedee">
                 <div class="p-top">
                     <a href="https://peppubuild.netlify.app"><img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"
                             alt="profile_picture" /></a>
                 </div>
                 <div class="profile">
                     <img :src="imageLink" alt="profile_picture" />
-                    <h3>{{name}}
+                    <h3>{{ name }}
                     </h3>
                 </div>
                 <ul>
@@ -49,12 +57,28 @@ let userinfo = JSON.parse(localStorage.getItem('user'));
 export default {
     name: 'Sidebar',
     data() {
-    let img = userinfo.picture;
-    return {
-      name: userinfo.given_name,
-      imageLink: img,
-    };
-  },
+        let img = userinfo.picture;
+        return {
+            name: userinfo.given_name,
+            imageLink: img,
+        };
+    },
+
+    methods: {
+        showSide() {
+            var x = document.getElementById("dedee");
+            var y = document.getElementById("d-cont");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.marginLeft = "225px";
+                y.style.width = "calc(100% - 225px)";
+            } else {
+                x.style.display = "none";
+                y.style.width = "100%";
+                y.style.marginLeft = "0%";
+            }
+        }
+    }
 }
 </script>
 
@@ -109,6 +133,33 @@ body {
     transition-timing-function: ease;
     transition-delay: 0s;
     transition-property: all;
+}
+
+.sidebar-burger-line {
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    background-color: red;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.sidebar-burger {
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 45px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    display: none;
+    float: right;
+    cursor: pointer;
 }
 
 .wrapper .sidebar .profile {
@@ -200,4 +251,16 @@ body {
 
 .sidebar {
     box-shadow: 0 0 5px 0 black;
-}</style>
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        width: 100%;
+    }
+
+    .sidebar-burger {
+        display: block;
+    }
+}
+</style>

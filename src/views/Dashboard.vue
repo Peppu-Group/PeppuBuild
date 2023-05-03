@@ -1,17 +1,17 @@
 <template>
     <body id="if7l">
         <Sidebar />
-        <div class="dash-content">
+        <div class="dash-content" id="d-cont">
             <div id="i2sw">My Dashboard
             </div>
             <section-one>
                 <div class="one-container">
                     <div class="one-child">
                         <p class="i0sf">
-                            Hi {{name}}, welcome back!
+                            Hi {{ name }}, welcome back!
                         </p>
                         <p class="i0sg">
-                            We hope you're having a great day and are 
+                            We hope you're having a great day and are
                             ready to dive back and start creating magic.
                         </p>
                     </div>
@@ -31,10 +31,10 @@ export default {
     name: 'Dashboard',
     components: { Sidebar },
     data() {
-    return {
-      name: userinfo.given_name,
-    };
-  },
+        return {
+            name: userinfo.given_name,
+        };
+    },
 }
 </script>
 
@@ -71,7 +71,7 @@ export default {
 }
 
 #i2sw {
-    padding: 30px;
+    padding: 10%;
     text-align: left;
     font-family: Helvetica, sans-serif;
     font-size: 25px;
@@ -93,4 +93,10 @@ export default {
         padding-bottom: 20px;
         padding-left: 20px;
     }
-}</style>
+
+    .dash-content {
+        width: 100%;
+        margin-left:0%;
+    }
+}
+</style>
