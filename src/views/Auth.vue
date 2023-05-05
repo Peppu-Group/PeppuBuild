@@ -7,8 +7,11 @@
             </div>
             <div class="logo-img">
                 <img id="i2gy" src="../assets/logo.png" />
+                <button @click="createUser">Click me</button>
+                <button @click="createMail">Create Mail</button>
             </div>
-            <div id="i9x1" v-for="user in users" :key="user.id">Hey!! We use Netlify for hosting and authentication. We'll introduce Google
+            <div id="i9x1" v-for="user in users" :key="user.id">Hey!! We use Netlify for hosting and authentication. We'll
+                introduce Google
                 and other
                 authentication
                 means later {{ user.email }}.
@@ -35,6 +38,9 @@
 import netlifyIdentity from 'netlify-identity-widget';
 import { useCollection } from 'vuefire'
 import { usersRef } from '../firebaseInit';
+import { collection, addDoc } from "firebase/firestore";
+import axios from 'axios';
+
 const users = useCollection(usersRef);
 
 export default {
@@ -67,7 +73,34 @@ export default {
         }
     },
     methods: {
+        createUser() {
+            // search for user email.
+            // if not found, add it to database.
+            // send welcome message.
+            const docRef = addDoc(usersRef, {
+                email: "Tokyo"
+            });
+            console.log("Document written with ID: ", docRef.id);
 
+        },
+
+        createMail() {
+            const form = new FormData();
+            form.append('from', 'Mailgun Sandbox <postmaster@sandbox02193a1e330247a48a9a5996e5c48c89.mailgun.org>');
+            form.append('to', 'Ukpai Ugochi <users@peppubuild.com>');
+            form.append('subject', 'Hello Ukpai Ugochi');
+            form.append('text', 'Congratulations Ukpai Ugochi, you just sent an email with Mailgun! You are truly awesome!');
+
+            const response = fetch('https://api.mailgun.net/v3/sandbox02193a1e330247a48a9a5996e5c48c89.mailgun.org/messages', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Basic ' + btoa('api:6c58393e6edf54de9f914d88325c1bf2-102c75d8-74a87048')
+                },
+                body: form
+            });
+
+            console.log(response)
+        }
     }
 }
 
