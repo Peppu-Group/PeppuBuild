@@ -1,32 +1,23 @@
 <template>
     <body id="iljx">
-        <div class="background">
+        <div class="setup-background">
             <div class="gjs-row" id="iys7">
                 <div class="gjs-cell" id="id2x">
                 </div>
             </div>
-            <div class="logo-img">
+            <div class="setup-img">
                 <img id="i2gy" src="../assets/logo.png" />
             </div>
-            <div id="i9x1">Hey!! We use Netlify for hosting and authentication. We'll
-                introduce Google
-                and other
-                authentication
-                means later.
+            <div id="i9x1">Hello {{ name }}, build fully responsive multi-page sites with Peppubuild. <br/> Let's walk you through building your first site.
             </div>
-            <div class="gjs-row" id="i27o">
-                <div class="gjs-cell" id="ioc3">
-                </div>
+            
+            <div class="start">
+                <button class='setup-button' @click="start">Start with a Template</button>
+            </div>
+            <div id="i9x1">If you're not in a rush to build a website, explore Peppubuild's dashboard.
             </div>
             <div class="start">
-                <div id="g_id_onload"
-                    data-client_id="913987535189-inmbarcfp0be3l5mhqcu5ca46ss8po7c.apps.googleusercontent.com"
-                    data-callback="handleCredentialResponse">
-                </div>
-                <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
-            </div>
-            <div class="logo-img">
-                <img id="iix4i" src="../assets/intro.png" />
+                <button class='setup-button' @click="skip">Skip to Dashboard</button>
             </div>
         </div>
     </body>
@@ -40,13 +31,15 @@ import { collection, addDoc } from "firebase/firestore";
 import axios from 'axios';
 
 const users = useCollection(usersRef);
+let userinfo = JSON.parse(localStorage.getItem('user'));
 
 export default {
     name: 'Auth',
 
     data() {
         return {
-            users: users
+            users: users,
+            name: userinfo.given_name
         }
     },
 
@@ -113,7 +106,13 @@ export default {
             });
 
             console.log(response)
-        }
+        },
+
+        skip() {
+            this.$router.push({ name: "dashboard" });
+        }, 
+
+        start() {}
     }
 }
 
@@ -128,10 +127,41 @@ body {
     margin: 0;
 }
 
-.logo-img {
+.setup-img {
     display: grid;
     place-items: center;
     overflow: hidden;
+    margin: 50px;
+}
+
+/* CSS */
+.setup-button {
+  background: #2b7510;
+  border-radius: 999px;
+  box-shadow: #2b7510 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.setup-background {
+    background-color: #ffffff;
+    background-image: linear-gradient(to top right, #ffffff, #b5cabb, #ffffff, #f0f0e0, #f0ebd8),
+    linear-gradient(to left, #ffffff, #ffffff);
+    height: 100vh;
 }
 
 .gjs-row {
@@ -184,12 +214,20 @@ body {
         text-align: center;
         font-family: Trebuchet MS, Helvetica, sans-serif;
     }
+
+    .setup-background {
+        height: 100vh;
+    }
 }
 
 @media (max-width: 768px) {
     .gjs-cell {
         width: 100%;
         display: block;
+    }
+
+    .setup-background {
+        height: 100vh;
     }
 }
 
@@ -218,6 +256,10 @@ body {
         width: 320px;
         height: 571px;
         padding: 0px 0px 0px 0px;
+    }
+
+    .setup-background {
+        height: 100vh;
     }
 }
 </style>
