@@ -8,21 +8,14 @@
             <div class="setup-img">
                 <img id="i2gy" src="../assets/logo.png" />
             </div>
-            <div id="i9x1">Hello {{ name }}, build fully responsive multi-page sites with Peppubuild. <br /> Let's walk you
-                through building your first site.
-            </div>
-
-            <div class="start">
-                <button class='setup-button' @click="start">Start with a Template</button>
-            </div>
-            <div id="i9x1">If you're not in a rush to build a website, explore Peppubuild's dashboard.
-            </div>
-            <div class="start">
-                <button class='setup-button' @click="skip">Skip to Dashboard</button>
+            <div id="i9x1">What type of website are you building?
             </div>
         </div>
     </body>
 </template>
+
+<script>
+</script>
   
 <script>
 import { usersRef } from '../firebaseInit';
@@ -31,28 +24,7 @@ import { addDoc } from "firebase/firestore";
 let userinfo = JSON.parse(localStorage.getItem('user'));
 
 export default {
-    name: 'Setup',
-
-    data() {
-        return {
-            name: userinfo.given_name
-        }
-    },
-
-    mounted() {
-        addDoc(usersRef, {
-            email: userinfo.email
-        });
-    },
-    methods: {
-        skip() {
-            this.$router.push({ name: "dashboard" });
-        },
-
-        start() {
-            this.$router.push({ name: "template" });
-        }
-    }
+    name: 'Template',
 }
 
 </script>
@@ -116,21 +88,6 @@ body {
     width: 8%;
     display: table-cell;
     height: 75px;
-}
-
-.start {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
-.img-start {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 20px;
-    border-style: solid;
-    border-color: #2dc046;
 }
 
 #i9x1 {

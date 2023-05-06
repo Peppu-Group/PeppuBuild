@@ -77,11 +77,8 @@ export default {
             let usersval = this.users;
             while (i < usersval.length) {
                 if (email != usersval[i].email) {
-                    let docRef = addDoc(usersRef, {
-                        email: email
-                    });
                     this.createMail(email)
-                    document.location.href = '/'
+                    document.location.href = '/setup'
                 } else {
                      document.location.href = '/dashboard'
                 }
