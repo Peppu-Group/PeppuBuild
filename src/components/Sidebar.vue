@@ -12,7 +12,7 @@
             <!--Top menu -->
             <div class="sidebar" id="dedee">
                 <div class="p-top">
-                    <a href="https://peppubuild.netlify.app"><img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"
+                    <a href="/"><img src="https://i.ibb.co/8BCBPZK/IMG-2437-1.png"
                             alt="profile_picture" /></a>
                 </div>
                 <div class="profile">
