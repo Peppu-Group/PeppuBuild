@@ -15,11 +15,11 @@
                     <a href='/' class="navbar-menu-link">Home</a>
                     <a href='/about' class="navbar-menu-link">About</a>
                     <a href='/contact' class="navbar-menu-link">Contact</a>
-                    <button v-if="!loggedIn" class="navbar-menu-link">
-                        <router-link to="/auth">Login</router-link>
+                    <button v-if="!loggedIn" class="navbar-menu-link setup-button">
+                        <router-link class="white" to="/auth">Login</router-link>
                     </button>
-                    <button v-if="loggedIn" class="navbar-menu-link success">
-                        <router-link to="/dashboard">Dashboard</router-link>
+                    <button v-if="loggedIn" class="navbar-menu-link setup-button">
+                        <router-link class="white" to="/dashboard">Dashboard</router-link>
                     </button>
                 </nav>
             </div>
@@ -92,9 +92,8 @@ export default {
     width: 100%;
 }
 
-.success {
-    background-color: rgb(137, 221, 137);
-    border: none;
+.white {
+    color: #FFFFFF;
 }
 
 .navbar-container {
