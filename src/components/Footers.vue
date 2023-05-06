@@ -2,9 +2,9 @@
     <div>
         <footer>
             <div class="footer-content">
-                <h3 id="i5l4t9">Build with PeppuDraw
+                <h3 id="i5l4t9">Build with Peppubuild
                 </h3>
-                <p id="i56doj">PeppuDraw is creating a better user interface and experience for 'drag-n-drop'.
+                <p id="i56doj">Peppubuild is creating a better user interface and experience for 'drag-n-drop'.
                     With our intuitive interface and GrapesJs API, anyone can create a professional-looking
                     website in a matter of minutes. Wether you're a small business owner, blogger, or creative
                     professional, a drag and drop website builder can help you achieve that. 
@@ -18,7 +18,7 @@
             </div>
             <div class="footer-bottom">
                 <p id="i3p4ne">copyright ©
-                    <a href="/">Made with Peppudraw</a>
+                    <a href="/">Made with Peppubuild</a>
                 </p>
             </div>
         </footer>
