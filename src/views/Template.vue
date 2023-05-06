@@ -9,6 +9,15 @@
                 <img id="i2gy" src="../assets/logo.png" />
             </div>
             <div id="i9x1">What type of website are you building?
+                <div class="drop-down">
+                <label for="inputTitle"></label>
+                <select class="classic" v-model="categories">
+                  <option value="science">Portfolio Website</option>
+                  <option value="technology">Landing Page</option>
+                  <option value="art">Business Website</option>
+                </select>
+              </div>
+              <button class="setup-button">Finish</button>
             </div>
         </div>
     </body>
@@ -18,9 +27,6 @@
 </script>
   
 <script>
-import { usersRef } from '../firebaseInit';
-import { addDoc } from "firebase/firestore";
-
 let userinfo = JSON.parse(localStorage.getItem('user'));
 
 export default {
@@ -45,6 +51,53 @@ body {
     margin: 50px;
 }
 
+.drop-down {
+    padding: 10px;
+}
+
+select {
+   /* styling */
+   background-color: white;
+  border: thin solid rgb(37, 196, 19);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  
+
+  /* reset */
+
+  margin: 30px;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select.classic {
+  background-image:
+    linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, skyblue, skyblue);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+
+
+input {
+    border: #2b7510;
+}
+
 /* CSS */
 .setup-button {
     background: #2b7510;
@@ -63,7 +116,6 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: fit-content;
     word-break: break-word;
     border: 0;
 }
