@@ -61,7 +61,7 @@ export default {
             </div>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy; <a href="#">Made with Peppudraw</a> </p>
+            <p>copyright &copy; <a href="#">Made with Peppubuild</a> </p>
         </div>
 
     </footer>

@@ -120,7 +120,7 @@ body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
-    background-color: rgb(28, 61, 21);
+    background-color: #2b7510;
     border-top-width: initial;
     border-right-width: initial;
     border-bottom-width: initial;

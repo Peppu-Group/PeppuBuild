@@ -16,7 +16,7 @@
                         <br />and technologies you love
                     </h1>
                     <br />
-                    <span id="iu1iov">PeppuDraw allows you to create pages using the JavaScript frameworks and technologies
+                    <span id="iu1iov">Peppubuild allows you to create pages using the JavaScript frameworks and technologies
                         you
                         love. With our powerful tools and user-friendly interface, you can easily build dynamic, responsive,
                         and
@@ -76,7 +76,7 @@
                                     <div class="badge-role">
                                         <br />
                                     </div>
-                                    <div class="badge-desc">Starting with Netlify, you can deploy your codes from PeppuDraw.
+                                    <div class="badge-desc">Starting with Netlify, you can deploy your codes from Peppubuild.
                                     </div>
                                 </div>
                                 <div class="badge-foot">
@@ -96,7 +96,7 @@
                                     <div class="badge-role">
                                         <br />
                                     </div>
-                                    <div class="badge-desc">While PeppuDraw is a Website builder, you have full control of
+                                    <div class="badge-desc">While Peppubuild is a Website builder, you have full control of
                                         your
                                         codes. You can export into a zip file or host them in a git repository.
                                     </div>
