@@ -9,9 +9,6 @@ import Dashboard from '../views/Dashboard.vue'
 import Logout from '@/components/Logout.vue'
 import Setup from '../views/Setup.vue'
 import Template from '../views/Template.vue'
-import Business from '../views/templates/Business.vue'
-import Landing from '../views/templates/Landing.vue'
-import Portfolio from '../views/templates/Portfolio.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,21 +65,6 @@ const router = createRouter({
       path: '/template',
       name: 'template',
       component: Template
-    },
-    {
-      path: '/business',
-      name: 'business',
-      component: Business
-    },
-    {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: Portfolio
-    },
-    {
-      path: '/landing',
-      name: 'landing',
-      component: Landing
     }
     /* 
     {
