@@ -78,7 +78,7 @@ export default {
             while (i < usersval.length) {
                 if (email != usersval[i].email) {
                     this.createMail(email)
-                    document.location.href = '/setup'
+                    this.$router.push({ name: "setup" });
                 } else {
                      document.location.href = '/dashboard'
                 }
@@ -96,12 +96,12 @@ export default {
 
         createMail(email) {
             const form = new FormData();
-            form.append('from', 'Mailgun Sandbox <postmaster@sandbox02193a1e330247a48a9a5996e5c48c89.mailgun.org>');
+            form.append('from', 'Ugochi from Peppubuild <postmaster@peppubuild.com>');
             form.append('to', email);
             form.append('subject', 'Hello Ukpai Ugochi');
             form.append('text', 'Congratulations Ukpai Ugochi, you just sent an email with Mailgun! You are truly awesome!');
 
-            const response = fetch('https://api.mailgun.net/v3/sandbox02193a1e330247a48a9a5996e5c48c89.mailgun.org/messages', {
+            const response = fetch('https://api.mailgun.net/v3/peppubuild.com/messages', {
                 method: 'POST',
                 headers: {
                     'Authorization': 'Basic ' + btoa('api:6c58393e6edf54de9f914d88325c1bf2-102c75d8-74a87048')
