@@ -190,7 +190,7 @@ input {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
     #i9x1 {
         padding: 10px;
         text-align: center;

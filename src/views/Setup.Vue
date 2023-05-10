@@ -1,6 +1,6 @@
 <template>
     <body id="iljx">
-        <div class="setup-background">
+        <div class="background">
             <div class="gjs-row" id="iys7">
                 <div class="gjs-cell" id="id2x">
                 </div>
@@ -96,12 +96,6 @@ body {
     border: 0;
 }
 
-.setup-background {
-    background-color: #ffffff;
-    background-image: linear-gradient(to top right, #ffffff, #b5cabb, #ffffff, #f0f0e0, #f0ebd8),
-        linear-gradient(to left, #ffffff, #ffffff);
-    height: 100vh;
-}
 
 .gjs-row {
     display: table;
@@ -153,10 +147,6 @@ body {
         text-align: center;
         font-family: Trebuchet MS, Helvetica, sans-serif;
     }
-
-    .setup-background {
-        height: 100vh;
-    }
 }
 
 @media (max-width: 768px) {
@@ -164,13 +154,9 @@ body {
         width: 100%;
         display: block;
     }
-
-    .setup-background {
-        height: 100vh;
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
     #i9x1 {
         padding: 10px;
         text-align: center;
@@ -195,10 +181,6 @@ body {
         width: 320px;
         height: 571px;
         padding: 0px 0px 0px 0px;
-    }
-
-    .setup-background {
-        height: 100vh;
     }
 }
 </style>
