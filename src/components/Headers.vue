@@ -16,7 +16,7 @@
                     <a href='/about' class="navbar-menu-link">About</a>
                     <a href='/contact' class="navbar-menu-link">Contact</a>
                     <button v-if="!loggedIn" class="navbar-menu-link setup-button">
-                        <router-link class="white" to="/auth">Login</router-link>
+                        <a href="/auth" class="white" to="/auth">Login</a>
                     </button>
                     <button v-if="loggedIn" class="navbar-menu-link setup-button">
                         <router-link class="white" to="/dashboard">Dashboard</router-link>
