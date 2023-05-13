@@ -232,7 +232,7 @@ display: block;
           .contain {
             height: 100%;
             width: 100vw;
-            background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://source.unsplash.com/hGV2TfOh0ns");
+            background-color: #111;
           }
 
           .text {
@@ -243,10 +243,7 @@ display: block;
 
           .text .big{
             font-size: 50px;
-            padding: 10vw;
-            background: -webkit-linear-gradient(#eee, #333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            padding: 5vw;
           }
 
           .text .small{
@@ -302,7 +299,7 @@ display: block;
           components: `
           <h1 class="center-one">This Text Section</h1>
           <div class="one-container">
-            <div class="one-child">
+            <div class="two-child">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
                 Maecenas at urna eu tortor fringilla ultrices. 
@@ -311,7 +308,7 @@ display: block;
                 Pellentesque non faucibus nisi, non tincidunt diam.
               </p>
             </div
-            <div class="one-child">
+            <div class="two-child">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mauris nec justo rutrum rhoncus. Suspendisse potenti. 
                 Maecenas at urna eu tortor fringilla ultrices. 
@@ -325,16 +322,14 @@ display: block;
           styles: `
           .one-container {
             display: flex;
-            width: 100%;
+            width: 80%;
             padding: 20px;
+            margin: auto;
+            border: 5px solid;
           }
 
           .center-one {
             text-align: center;
-          }
-
-          .one-child {
-            padding: 10px;
           }
           
           @media screen and (max-width: 800px) {
@@ -438,11 +433,12 @@ display: block;
           components: `
           <div class="cards">
             <div class="card">
-              <div class="card-header"></div>
+              <div class="card-header">
+                <img src='https://source.unsplash.com/mEZ3PoFGs_k' class='card-header img'></img>
+              </div>
               <div class="card-body">
                 <div class="card-title">Title one</div>
                 <div class="card-sub-title">Subtitle one</div>
-                <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
               </div>
             </div>
           </div>
@@ -455,7 +451,7 @@ display: block;
         }
         .card{
           background-color: white;
-          height: 300px;
+          height: 400px;
           width:300px;
           margin-top: 30px;
           margin-bottom:30px;
@@ -470,10 +466,13 @@ display: block;
           box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
         }
         .card-header{
-          height: 155px;
-          background-image:url("https://via.placeholder.com/350x250/78c5d6/fff");
+          height: 300px;
           background-size:cover;
           background-position:center center;
+        }
+
+        .img {
+          width: 300px;
         }
         .card-body{
           padding: 15px 15px 5px 15px;
@@ -488,10 +487,7 @@ display: block;
           font-size: 1em;
           margin-bottom: 15px;
         }
-        .card-desc{
-          font-size: 0.85rem;
-          line-height: 17px;
-        }
+        
           `,
         }
       }
