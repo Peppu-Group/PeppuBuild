@@ -328,10 +328,12 @@ body {
 .center-one{
   text-align:center;
   font-family:Verdana, Geneva, sans-serif;
+  padding: 7vw;
 }
 .center{
   text-align:center;
   font-family:Verdana, Geneva, sans-serif;
+  padding: 7vw;
 }
 .container{
   display:flex;
