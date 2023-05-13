@@ -232,7 +232,7 @@ display: block;
           .contain {
             height: 100%;
             width: 100vw;
-            background-color: #111;
+            background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://source.unsplash.com/hGV2TfOh0ns");
           }
 
           .text {
@@ -244,6 +244,9 @@ display: block;
           .text .big{
             font-size: 50px;
             padding: 10vw;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
           .text .small{
