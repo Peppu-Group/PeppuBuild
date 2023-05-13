@@ -134,13 +134,14 @@ body {
 
 .top {
     margin: 0;
-    padding: 20px;
+    padding: 5vw;
     font-size: 40px;
     text-align: center;
     background: -webkit-linear-gradient(rgb(26, 207, 62), rgb(12, 13, 5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 .background {
     background-color: #ffffff;
@@ -150,10 +151,14 @@ body {
 
 .center {
     text-align: center;
+    padding-top: 5vw;
 }
 
 .container {
     display: flex;
+    padding-top: 7vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
 }
 
 .child {
