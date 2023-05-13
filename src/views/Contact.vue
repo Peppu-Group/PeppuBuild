@@ -40,8 +40,10 @@ export default {
       emailjs.sendForm('service_6fgtutf', 'template_6ttzglg', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            this.$refs.form.reset();
         }, (error) => {
             console.log('FAILED...', error.text);
+            this.$refs.form.reset();
         });
     }
   }
