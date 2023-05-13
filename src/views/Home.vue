@@ -9,7 +9,7 @@
                         <br />Five Minutes
                         <br />
                     </div>
-                    <div class="small">Drag and drop blocks to build your landing page faster with PeppuDraw. 
+                    <div class="small">Drag and drop blocks to build your landing page faster with PeppuBuild. 
                     </div>
                 </div>
                 <div class="buttons">
@@ -39,9 +39,9 @@
                 <p id="i2933d">
                 <div id="izoy9i">
                     <span id="ielerm">
-                        <font face="verdana, sans-serif" id="iisrmk">PeppuDraw is an easy-to-use website builder that allows
+                        <font face="verdana, sans-serif" id="iisrmk">PeppuBuild is an easy-to-use website builder that allows
                             users to create beautiful and functional websites with just a few clicks. With its intuitive
-                            drag-and-drop interface and a wide range of customizable templates, PeppuDraw makes it easy for
+                            drag-and-drop interface and a wide range of customizable templates, PeppuBuild makes it easy for
                             users to create a website that perfectly suits their needs.
                         </font>
                     </span>
@@ -56,9 +56,9 @@
                 <div id="ixgy7n">
                     <span id="i41p2l">
                         <font face="verdana, sans-serif" id="iukymc">Whether you're building a personal blog or a business
-                            website, PeppuDraw has everything you need to create a professional-looking website in minutes.
+                            website, PeppuBuild has everything you need to create a professional-looking website in minutes.
                             Don't just take our word for it, watch the video to see how easy it is to create a website with
-                            PeppuDraw
+                            PeppuBuild
                         </font>
                     </span>
                 </div>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="card-sub-title">Publish your website with Netlify
                                 </div>
-                                <div class="card-desc">PeppuDraw, integrates with Netlify. You can easily publish your
+                                <div class="card-desc">PeppuBuild, integrates with Netlify. You can easily publish your
                                     website with few clicks and no prior knowledge.
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                     <div id="i3r5tg">
                         <span id="idabqv">
                             <font face="verdana, sans-serif">Ready to start building your own website? Look no further than
-                                PeppuDraw! With our intuitive drag-and-drop interface and a wide range of customizable
+                                PeppuBuild! With our intuitive drag-and-drop interface and a wide range of customizable
                                 templates, creating a beautiful and functional website has never been easier.
                             </font>
                         </span>
@@ -200,7 +200,7 @@
                     <div id="ic11hs">
                         <span id="i6eiss">
                             <font face="verdana, sans-serif">Simply choose the template that best suits your needs, and
-                                customize it to make it your own. With PeppuDraw, you can create a website that perfectly
+                                customize it to make it your own. With PeppuBuild, you can create a website that perfectly
                                 reflects your brand or personality in minutes.
                             </font>
                         </span>
