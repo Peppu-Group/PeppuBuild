@@ -10,7 +10,7 @@
             </section>
             <form>
                 <div class="form-container">
-                    <div>
+                    <div class="child">
                         <iframe class="img" src="https://www.youtube.com/embed/9RpRIntZ-fc">
                         </iframe>
                     </div>
@@ -57,7 +57,7 @@ body {
 
 .bdg-sect {
     text-align: center;
-    padding: 10px;
+    padding: 7vw;
 }
 
 .heading-text {
@@ -145,6 +145,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 7vw;
 }
 
 @media (max-width: 600px) {
