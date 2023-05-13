@@ -116,15 +116,8 @@ footer {
 }
 
 .footer-bottom {
-  background-image: initial;
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
   background-color: rgb(0, 0, 0);
-  width: 100vw;
+  width: 100%;
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
