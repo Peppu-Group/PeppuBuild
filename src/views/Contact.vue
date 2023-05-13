@@ -8,16 +8,17 @@
                 <span id="ilg2">Do you have any questions about Peppubuild? You can watch the video of how it works below.
                     Schedule a demo to talk about how Peppubuild can work for you and your team.</span>
             </section>
-            <form>
+            <form ref="form" @submit.prevent="sendEmail">
                 <div class="form-container">
                     <div class="child">
                         <iframe class="img" src="https://www.youtube.com/embed/9RpRIntZ-fc">
                         </iframe>
                     </div>
                     <div class="foot-form-cont">
-                        <input name="name" placeholder="Name" class="sub-input" />
+                        <input name="from_name" placeholder="Name" class="sub-input" />
                         <input name="email" placeholder="Email" class="sub-input" />
-                        <button type="button" class="sub-btn">Submit</button>
+                        <textarea name="message" placeholder="Message" class="sub-input"></textarea>
+                        <button type="submit" class="sub-btn">Submit</button>
                     </div>
                 </div>
             </form>
@@ -29,10 +30,21 @@
 <script>
 import Footers from '../components/Footers.vue'
 import Headers from '../components/Headers.vue'
+import emailjs from '@emailjs/browser'
 
 export default {
     name: 'Contact',
-    components: { Headers, Footers }
+    components: { Headers, Footers },
+    methods: {
+    sendEmail() {
+      emailjs.sendForm('service_6fgtutf', 'template_6ttzglg', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+    }
+  }
 }
 </script>
 
