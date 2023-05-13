@@ -230,7 +230,7 @@ display: block;
           `,
           styles: `
           .contain {
-            height: auto;
+            height: 100%;
             width: 100vw;
             background-color: #111;
           }
@@ -238,11 +238,12 @@ display: block;
           .text {
             color: white;
             text-align: center;
+            padding: 5vw;
           }
 
           .text .big{
             font-size: 50px;
-            padding: 5vw;
+            padding: 10vw;
           }
 
           .text .small{
