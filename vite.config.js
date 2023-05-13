@@ -13,6 +13,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    exclude: ['vuefire']
+    exclude: ['vuefire'],
+    exclude: ['vue-toastification']
   }
 })

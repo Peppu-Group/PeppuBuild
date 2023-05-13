@@ -1,7 +1,8 @@
 <template>
     <div class="background">
-    <body id="iljx">
-        <Headers />
+
+        <body id="iljx">
+            <Headers />
             <section class="bdg-sect">
                 <h1 class="heading">Talk to Us
                 </h1>
@@ -22,31 +23,39 @@
                     </div>
                 </div>
             </form>
-        <Footers />
-    </body>
-</div>
+            <Footers />
+        </body>
+    </div>
 </template>
   
 <script>
 import Footers from '../components/Footers.vue'
 import Headers from '../components/Headers.vue'
 import emailjs from '@emailjs/browser'
+import { useToast } from "vue-toastification";
+
+const toast = useToast();
 
 export default {
     name: 'Contact',
     components: { Headers, Footers },
+
     methods: {
-    sendEmail() {
-      emailjs.sendForm('service_6fgtutf', 'template_6ttzglg', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
-        .then((result) => {
-            console.log('SUCCESS!', result.text);
-            this.$refs.form.reset();
-        }, (error) => {
-            console.log('FAILED...', error.text);
-            this.$refs.form.reset();
-        });
+        sendEmail() {
+            emailjs.sendForm('service_6fgtutf', 'template_6ttzglg', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
+                .then((result) => {
+                    toast.success(`${result.text} Successfully sent mail`, {
+                        timeout: 2000
+                    });
+                    this.$refs.form.reset();
+                }, (error) => {
+                    toast.success(`${error.text} An error occured`, {
+                        timeout: 2000
+                    });
+                    this.$refs.form.reset();
+                });
+        }
     }
-  }
 }
 </script>
 
@@ -76,7 +85,7 @@ body {
 
 .heading-text {
     text-align: center;
-    padding: 20px; 
+    padding: 20px;
 }
 
 #ilg2 {
