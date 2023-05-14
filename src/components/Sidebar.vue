@@ -26,7 +26,7 @@
                                 </i></span><span class="item">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="/workspace"><span class="icon"><i class="fas fa-desktop">
+                        <a href="https://workspace.peppubuild.com"><span class="icon"><i class="fas fa-desktop">
                                 </i></span><span class="item">Site & App</span></a>
                     </li>
                     <li>
