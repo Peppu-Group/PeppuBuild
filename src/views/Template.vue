@@ -39,7 +39,7 @@ export default {
 
   methods: {
     finish() {
-        this.$router.push({name: this.categories})
+        document.location.href = 'https://workspace.peppubuild.com'
     }
   }
 }
