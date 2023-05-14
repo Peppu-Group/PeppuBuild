@@ -96,10 +96,10 @@ export default {
 
         createMail(email) {
             const form = new FormData();
-            form.append('from', 'Ugochi from Peppubuild <postmaster@peppubuild.com>');
+            form.append('from', 'Ugochi from Peppubuild <users@peppubuild.com>');
             form.append('to', email);
             form.append('subject', 'Hello Ukpai Ugochi');
-            form.append('text', 'Congratulations Ukpai Ugochi, you just sent an email with Mailgun! You are truly awesome!');
+            form.append('template', 'welcome');
 
             const response = fetch('https://api.mailgun.net/v3/peppubuild.com/messages', {
                 method: 'POST',

@@ -49,7 +49,7 @@ export default {
                     });
                     this.$refs.form.reset();
                 }, (error) => {
-                    toast.success(`${error.text} An error occured`, {
+                    toast.error(`${error.text} An error occured`, {
                         timeout: 2000
                     });
                     this.$refs.form.reset();
