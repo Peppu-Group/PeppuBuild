@@ -16,9 +16,9 @@
                         </iframe>
                     </div>
                     <div class="foot-form-cont">
-                        <input name="from_name" placeholder="Name" class="sub-input" />
-                        <input name="email" placeholder="Email" class="sub-input" />
-                        <textarea name="message" placeholder="Message" class="sub-input"></textarea>
+                        <input name="from_name" placeholder="Name" class="sub-input" required/>
+                        <input name="email" placeholder="Email" class="sub-input" type="email" required/>
+                        <textarea name="message" placeholder="Message" class="sub-input" required></textarea>
                         <button type="submit" class="sub-btn">Submit</button>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export default {
 
     methods: {
         sendEmail() {
-            emailjs.sendForm('service_6fgtutf', 'template_6ttzglg', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
+            emailjs.sendForm('service_ye8ngya', 'template_hjuc4sp', this.$refs.form, 'gaqDvZ1uPiEy0Z2CO')
                 .then((result) => {
                     toast.success(`${result.text} Successfully sent mail`, {
                         timeout: 2000
