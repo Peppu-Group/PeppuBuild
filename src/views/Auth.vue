@@ -46,7 +46,7 @@ export default {
 
     data() {
         return {
-            users: users
+            users: users,
         }
     },
 
@@ -66,9 +66,10 @@ export default {
         window.handleCredentialResponse = (response) => {
             localStorage.setItem("gtoken", response.credential)
             let responsePayload = decodeJwtResponse(response.credential);
+            this.$store.commit('SET_USER', responsePayload);
+            localStorage.setItem("user", JSON.stringify(responsePayload));
             // console.log(responsePayload.email)
             this.createUser(responsePayload.email)
-            localStorage.setItem("user", JSON.stringify(responsePayload))
         }
     },
     methods: {
@@ -77,7 +78,7 @@ export default {
             let usersval = this.users;
             while (i < usersval.length) {
                 if (email != usersval[i].email) {
-                    document.location.href = '/setup'
+                    this.$router.push({ name: "setup" })
                 } else {
                      document.location.href = '/dashboard'
                 }

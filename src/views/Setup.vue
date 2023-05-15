@@ -28,25 +28,23 @@
 import { usersRef } from '../firebaseInit';
 import { addDoc } from "firebase/firestore";
 
-let userinfo = JSON.parse(localStorage.getItem('user'));
-
 export default {
     name: 'Setup',
 
     data() {
         return {
-            name: userinfo.given_name
+            name: this.$store.state.user.email
         }
     },
 
     mounted() {
         addDoc(usersRef, {
-            email: userinfo.email
+            email: this.$store.state.user.email
         });
         const form = new FormData();
         form.append('from', 'Ugochi from Peppubuild <users@peppubuild.com>');
-        form.append('to', userinfo.email);
-        form.append('subject', `Hello ${userinfo.given_name}`);
+        form.append('to', this.$store.state.user.email);
+        form.append('subject', `Welcome ${this.$store.state.user.given_name}`);
         form.append('template', 'welcome');
 
         const response = fetch('https://api.mailgun.net/v3/peppubuild.com/messages', {

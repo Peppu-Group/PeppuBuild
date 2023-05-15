@@ -62,15 +62,13 @@ const router = createRouter({
       path: '/setup',
       name: 'setup',
       component: Setup,
-      /* 
       beforeEnter: (to, from, next) => {
-        if (from.path === '/auth'  && store.getters.loggedIn) {
+        if (from.path === '/auth') {
           next()
         } else {
           next({ name: 'auth' })
         }
       }
-      */
     },
     {
       path: '/template',

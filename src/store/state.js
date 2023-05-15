@@ -1,3 +1,4 @@
 export default {
-    token: localStorage.getItem('gtoken') || null
+    token: localStorage.getItem('gtoken') || null,
+    user: []
 }
