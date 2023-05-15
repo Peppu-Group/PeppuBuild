@@ -66,7 +66,7 @@ export default {
         window.handleCredentialResponse = (response) => {
             localStorage.setItem("gtoken", response.credential)
             let responsePayload = decodeJwtResponse(response.credential);
-            console.log(responsePayload.email)
+            // console.log(responsePayload.email)
             this.createUser(responsePayload.email)
             localStorage.setItem("user", JSON.stringify(responsePayload))
         }
@@ -77,8 +77,7 @@ export default {
             let usersval = this.users;
             while (i < usersval.length) {
                 if (email != usersval[i].email) {
-                    this.createMail(email)
-                    this.$router.push({ name: "setup" });
+                    document.location.href = '/setup'
                 } else {
                      document.location.href = '/dashboard'
                 }
@@ -93,24 +92,6 @@ export default {
             // console.log("Document written with ID: ", docRef.id);
 
         },
-
-        createMail(email) {
-            const form = new FormData();
-            form.append('from', 'Ugochi from Peppubuild <users@peppubuild.com>');
-            form.append('to', email);
-            form.append('subject', 'Hello Ukpai Ugochi');
-            form.append('template', 'welcome');
-
-            const response = fetch('https://api.mailgun.net/v3/peppubuild.com/messages', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Basic ' + btoa('api:6c58393e6edf54de9f914d88325c1bf2-102c75d8-74a87048')
-                },
-                body: form
-            });
-
-            console.log(response)
-        }
     }
 }
 

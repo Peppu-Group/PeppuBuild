@@ -43,6 +43,19 @@ export default {
         addDoc(usersRef, {
             email: userinfo.email
         });
+        const form = new FormData();
+        form.append('from', 'Ugochi from Peppubuild <users@peppubuild.com>');
+        form.append('to', userinfo.email);
+        form.append('subject', `Hello ${userinfo.given_name}`);
+        form.append('template', 'welcome');
+
+        const response = fetch('https://api.mailgun.net/v3/peppubuild.com/messages', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Basic ' + btoa('api:6c58393e6edf54de9f914d88325c1bf2-102c75d8-74a87048')
+            },
+            body: form
+        });
     },
     methods: {
         skip() {
