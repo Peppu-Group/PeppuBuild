@@ -15,11 +15,8 @@
                     <a href='/' class="navbar-menu-link">Home</a>
                     <a href='/about' class="navbar-menu-link">About</a>
                     <a href='/contact' class="navbar-menu-link">Contact</a>
-                    <button v-if="!loggedIn" class="navbar-menu-link setup-button">
-                        <a href="/auth" class="white" to="/auth">Login</a>
-                    </button>
-                    <button v-if="loggedIn" class="navbar-menu-link setup-button">
-                        <router-link class="white" to="/dashboard">Dashboard</router-link>
+                    <button class="navbar-menu-link setup-button">
+                        <a href="http://localhost:5173/auth" class="white">Login</a>
                     </button>
                 </nav>
             </div>
@@ -30,12 +27,6 @@
 <script>
 export default {
     name: 'Headers',
-
-    computed: {
-        loggedIn() {
-            return this.$store.getters.loggedIn;
-        },
-    },
 
     mounted() {
         var items = document.querySelectorAll('#iksl');
@@ -85,6 +76,28 @@ export default {
 </script>
 
 <style>
+.setup-button {
+    background: #2b7510;
+    border-radius: 999px;
+    box-shadow: #2b7510 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
 .navbar {
     background-color: rgb(17, 17, 17);
     color: rgb(221, 221, 221);
@@ -94,6 +107,7 @@ export default {
 
 .white {
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .navbar-container {

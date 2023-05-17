@@ -11,7 +11,6 @@ import plugin from 'grapesjs-preset-webpage'
 import grapesjsblocks from 'grapesjs-blocks-basic'
 import exportbutton from 'grapesjs-plugin-export'
 import grapesnav from 'grapesjs-navbar'
-import { auth } from '../netlify/redirect'
 
 export default {
   name: 'HomeView',
