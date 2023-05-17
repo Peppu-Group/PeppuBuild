@@ -16,7 +16,7 @@
                     <a href='/about' class="navbar-menu-link">About</a>
                     <a href='/contact' class="navbar-menu-link">Contact</a>
                     <button class="navbar-menu-link setup-button">
-                        <a href="http://localhost:5173/auth" class="white">Login</a>
+                        <a href="https://workspace.peppubuild.com/auth" class="white">Login</a>
                     </button>
                 </nav>
             </div>
