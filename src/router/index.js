@@ -3,7 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import Logout from '@/components/Logout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,11 +26,6 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
-    },
-    {
-      path: '/logout',
-      name: 'logout',
-      component: Logout
     },
     /* 
     {
