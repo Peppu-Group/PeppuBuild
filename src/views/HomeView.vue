@@ -30,11 +30,44 @@ export default {
         'grapesjsblocks': {}
       }
     })
+    var comps = editor.DomComponents;
+    var defaultType = comps.getType('default');
 
+    editor.DomComponents.addType('text', {
+      model: defaultType.model,
+      view: defaultType.view.extend({
+        events: {
+          click: function () {
+            focus();
+            this.onActive();
+          },
+          dblclick: function () {
+            focus();
+            this.onActive();
+          },
+          touchend: function () {
+            focus();
+            this.onActive();
+          }
+        }
+      })
+    });
     // create footer section
     editor.Components.addType('footer', {
       // Make the editor understand when to bind `my-input-type`
       isComponent: (el) => el.tagName === 'INPUT',
+
+      view: defaultType.view.extend({
+        events: {
+          // or
+          dblclick: function () {
+            console.log('hiii')
+          },
+          touchend: function () {
+            alert('hiii')
+          }
+        },
+      }),
 
       // Model definition
       model: {
@@ -420,8 +453,8 @@ display: block;
       category: 'Blocks'
     })
 
-     // create section cards
-     editor.Components.addType('cards', {
+    // create section cards
+    editor.Components.addType('cards', {
       // Make the editor understand when to bind `my-input-type`
 
       // Model definition
@@ -677,8 +710,8 @@ display: block;
       }
     })
 
-   // A block for the custom component
-   bm.add('form', {
+    // A block for the custom component
+    bm.add('form', {
       label: 'form',
       content: { type: 'form' },
       attributes: {
@@ -844,8 +877,8 @@ display: block;
       }
     })
 
-     // A block for the custom component
-   bm.add('sidebar', {
+    // A block for the custom component
+    bm.add('sidebar', {
       label: 'sidebar',
       content: { type: 'sidebar' },
       attributes: {
