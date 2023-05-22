@@ -4,7 +4,7 @@
         <hero>
             <div class="contain">
                 <div class="text">
-                    <div class="big">Create a Landing Page
+                    <div class="big">Create a Website
                         <br />in
                         <br />Five Minutes
                         <br />
