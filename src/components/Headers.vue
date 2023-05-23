@@ -15,6 +15,7 @@
                     <a href='/' class="navbar-menu-link">Home</a>
                     <a href='/about' class="navbar-menu-link">About</a>
                     <a href='/contact' class="navbar-menu-link">Contact</a>
+                    <a href='https://docs.peppubuild.com/' class="navbar-menu-link">Docs</a>
                     <button class="navbar-menu-link setup-button">
                         <a href="https://workspace.peppubuild.com/auth" class="white">Login</a>
                     </button>
