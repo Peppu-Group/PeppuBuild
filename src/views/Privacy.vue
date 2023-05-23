@@ -12,11 +12,11 @@
             <section class="p-content">
                 <h1 class="head-content">Policy
                 </h1>
-                <span id="ilg2">This Privacy Policy describes Our policies and procedures on the collection, use and
+                <span id="ilg2" class="light">This Privacy Policy describes Our policies and procedures on the collection, use and
                     disclosure of Your information when You use the Service and tells You about Your privacy rights and how
                     the law protects You. We use Your Personal data to provide and improve the Service. By using the
                     Service, You agree to the collection and use of information in accordance with this Privacy Policy.
-                    <br /><br /><br />Peppubuild ("us", "we", or "our") operates the https://www.Peppubuild.com website (the
+                    <br /><br /><br />Peppubuild ("us", "we", or "our") operates the https://www.peppubuild.com website (the
                     "Service").
                     <br /><br /><br /> We use your data to provide and improve the Service. By using the Service, you agree
                     to the
@@ -25,12 +25,12 @@
                     Conditions.</span>
                 <h1 class="head-content">Methods of processing Data
                 </h1>
-                <span id="ilg2">Peppubuild doesn't store user personal information or data. All projects created are stored in Firebase.
+                <span id="ilg2" class="light">Peppubuild doesn't store user personal information or data. All projects created are stored in Firebase.
                     <br /><br /><br /> Projects created and published by our users are stored in Firebase, we don't collect
                     your personal information, we only require your email address.</span>
                 <h1 class="head-content">Changes to Policy
                 </h1>
-                <span id="ilg2">This Privacy Policy is subject to occasional revision, and we reserve the right to modify
+                <span id="ilg2" class="light">This Privacy Policy is subject to occasional revision, and we reserve the right to modify
                     this Privacy Policy relating to Peppubuild at any time, effective upon posting of an updated version of
                     this Privacy Policy. This Policy is effective from 23rd May, 2023.</span>
             </section>
@@ -62,5 +62,9 @@ export default {
     padding: 20px;
     font-size: 30px;
     text-align: center;
+}
+
+.light {
+    font-weight: 100;
 }
 </style>
