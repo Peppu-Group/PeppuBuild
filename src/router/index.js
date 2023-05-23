@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import Privacy from '../views/Privacy.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: Privacy
     },
     /* 
     {
