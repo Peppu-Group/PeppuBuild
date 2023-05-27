@@ -55,7 +55,7 @@
                 <span id="ilg2" class="light">This Privacy Policy is subject to occasional revision, and we reserve the
                     right to modify
                     this Privacy Policy relating to Peppubuild at any time, effective upon posting of an updated version of
-                    this Privacy Policy. This Policy is effective from 23rd May, 2023.</span>
+                    this Privacy Policy. This Policy is effective from 27rd May, 2023.</span>
             </section>
             <Footers />
         </body>
