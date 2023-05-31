@@ -10,12 +10,13 @@
           professional, a drag and drop website builder can help you achieve that. 
         </p>
         <ul class="socials">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100092502291993&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/peppubuild?t=UvQ07a-j4IGi4DaexUOrog&s=08"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://github.com/Peppu-Group/PeppuBuild"><i class="fa fa-github"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
         </ul>
       </div>
+      <!--"https://www.facebook.com/profile.php?id=100092502291993&mibextid=ZbWKwL-->
       <div class="footer-bottom">
         <p id="i3p4ne">copyright ©
           <a href="/">Made with Peppubuild</a>
